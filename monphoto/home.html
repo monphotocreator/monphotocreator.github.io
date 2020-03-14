@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<title>Art without frame - Home</title>
+	<link rel="shortcut icon" href="images/logo/favicon.ico" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<!-- bower:css -->
+ 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+ 	<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
+ 	<link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+ 	<link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
+ 	<link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+ 	<!-- endbower -->
+ 	<link type="text/css" rel="stylesheet" href="dist/styles.min.css">
+</head>
+<body >
+<!-- Navbar and Carousel + Parallax effects thanks to @taylorgrendel  -->
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-moving" role="navigation">
+	 <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="home.html"><img class="logo-brand" src="images/logo/logo.png" alt=""></a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <nav class="stroke">
+	      	<ul class="nav navbar-nav navbar-right">
+	      	  <li class="nav-item active">
+	      	  	<a class="nav-link" href="home.html">Trang chủ <span class="sr-only">(current)</span></a>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	  	<a class="nav-link" href="about.html">Về chúng tôi</a>
+	      	  </li>
+
+	      	  <li class="dropdown">
+	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm <span class="caret top"></span></a>
+	      	    <ul class="dropdown-menu" role="menu">
+	      	      <li><a href="products.html#">Sơn dầu</a></li>
+	      	      <li><a href="products.html#">Màu nước</a></li>
+	      	      <li><a href="products.html#">Sắp đặt</a></li>
+	      	      <li><a href="products.html#">Digital Art</a></li>
+	      	      <li><a href="products.html#">Calligraphy</a></li>
+	      	      <li class="divider"></li>
+	      	      <li><a href="products.html#">Photography (BETA)</a></li>
+	      	      <li><a href="products.html#">Mixed Media (BETA)</a></li>
+	      	    </ul>
+	      	  </li>
+	      	  <li class="dropdown">
+	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mở rộng <span class="caret top"></span></a>
+	      	    <ul class="dropdown-menu" role="menu">
+	      	      <li><a href="#">Khách hàng</a></li>
+	      	      <li><a href="#">Dành cho đối tác</a></li>
+	      	      <li><a href="#">Họa sĩ của AWF</a></li>
+	      	      <li class="divider"></li>
+	      	      <li><a href="#">Chương trình khuyến mãi</a></li>
+	      	    </ul>
+	      	  </li>
+	      	  <li class="dropdown" id="account">
+	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	      	    	<i class="dropdown-toggle__icon fa fa-user-circle-o" aria-hidden="true"></i>
+	      	    </a>
+	      	    <ul class="dropdown-menu" role="menu">
+	      	      <li><a id="login" href="#modal-login" data-toggle="modal" data-target="#myModal">Đăng nhập</a></li>
+	      	      <li><a id="register" href="#modal-register" data-toggle="modal" data-target="#myModal">Đăng ký</a></li>
+	      	    </ul>
+	      	  </li>
+	      	  <li class="nav-item">
+	      	  	<a class="nav-link" href=""><i class="nav-link__icon fa fa-shopping-cart" aria-hidden="true"></i> <sup><span class="badge">0</span></sup></a>
+	      	  </li>
+
+	      	</ul>
+	      </nav>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+<!-- Modals -->
+<!-- Modal Login-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	          <ul class="nav nav-pills nav-justified">
+	            <li class="active"><a data-toggle="tab" href="#modal-login" style="font-size: 1.15rem;">ĐĂNG NHẬP</a></li>
+	            <li><a data-toggle="tab" href="#modal-register" style="font-size: 1.15rem;">ĐĂNG KÝ TÀI KHOẢN</a></li>
+	          </ul>
+	      </div>
+	      <div class="modal-body">
+	        <div class="tab-content">
+	          <div id="modal-login" class="tab-pane fade in active">
+	              <form>
+	                <label>Email: </label><br/><input class="form-control" type="email" name="username" placeholder="phuchoang.inf@gmail.com" /><br />
+	                <label>Mật khẩu: </label><br/><input class="form-control" type="password" name="password" placeholder="**********" /><br />
+	                <button class="btn btn-info">Đăng nhập</button>
+	              </form>
+	          </div>
+	          <div id="modal-register" class="tab-pane fade">
+	            <form>
+	              <label>Địa chỉ Email: </label><br /><input class="form-control" type="email" name="email" placeholder="Email" /><br />
+	              <label>Họ và tên: </label><br /><input class="form-control" name="name" placeholder="Họ tên" /> <br />
+	              <label>Mật khẩu: </label><br /><input class="form-control" type="password" name="password" placeholder="Mật khẩu" /><br/>
+	              <label>Xác nhận mật khẩu: </label><br /><input class="form-control" type="password" name="repassword" placeholder="Xác nhận mật khẩu" /> <br />
+	              <button class="btn btn-info">Đăng ký tài khoản</button>
+	            </form>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<!-- End of Modals -->
+
+	</nav>
+	<div id="startchange"></div>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active full-screen">
+	      <img class="full-responsive" src="images/covers/cover1.jpg" alt="cover1">
+	      <div class="carousel-caption">
+      		<!-- <h2 class="home-slogan"><span>The &nbsp</span>Art <span>without boundaries...</span></h2> -->
+	        <h5>Tác phẩm: <span>Forest painting winter snow canvas</span></h5>
+	        <p>Tác giả: Leonid Afremov</p>
+	        <a href="products.html" class="btn btn-info">Tìm hiểu thêm</a>
+	      </div>
+	      <div class="gradient"></div>
+	    </div>
+	    <div class="item full-screen">
+	      <img class="full-responsive" src="images/covers/cover2.jpg" alt="cover2">
+	      <div class="carousel-caption">
+	        <h5>Tác phẩm: <span>Blossom iridescent</span></h5>
+	        <p>Tác giả: Tramy Pham</p>
+	          <a href="products.html" class="btn btn-info" style="padding: .5rem 1.65rem; margin-top: 1rem; font-size: 1.1rem;">Tìm hiểu thêm</a>
+	        </div>
+	        <div class="gradient"></div>
+	    </div>
+	    <div class="item full-screen">
+	      <img class="full-responsive" src="images/covers/cover4.jpg" alt="cover4">
+	      <div class="carousel-caption">
+	        <h5>Tác phẩm: <span>Helsinki prechorus canvas</span></h5>
+	        <p>Tác giả: Vova Phinland</p>
+	          <a href="products.html" class="btn btn-info" style="padding: .5rem 1.65rem; margin-top: 1rem; font-size: 1.1rem;">Tìm hiểu thêm</a>
+	        </div>
+	        <div class="gradient"></div>
+	     </div>
+	    <div class="item full-screen">
+	      <img class="full-responsive" src="images/covers/cover6.jpg" alt="cover5">
+	      <div class="carousel-caption">
+	        <h5>Tác phẩm: <span>Freedom - digital art</h5>
+	        <p>Tác giả: Ken Rich</p>
+	          <a href="products.html" class="btn btn-info" style="padding: .5rem 1.65rem; margin-top: 1rem; font-size: 1.1rem;">Tìm hiểu thêm</a>
+	        </div>
+	        <div class="gradient"></div>
+	    </div>
+
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left white"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right white"></span>
+	  </a>
+	</div><!-- End of Carousel -->
+<!-- End of Navbar and Carousel -->
+
+<div class="title">
+	<div class="title__cover title__cover--1">
+		<h3 class="right">Những tác phẩm nghệ thuật đương đại đa nền tảng, chất liệu </h3>
+	</div>
+</div>
+
+<!-- Art panels -->
+	<section id="home-art-panels">
+		<div class="color-cover"></div>
+		<div class="home-art-panels">
+			<div class="home-art-panels__panel panel1">
+				<p>experience</p>
+				<p>It</p>
+				<p>today</p>
+			</div>
+			<div class="home-art-panels__panel panel2">
+				<p>now</p>
+				<p>starts</p>
+				<p>discovering</p>
+			</div>
+			<div class="home-art-panels__panel panel3">
+				<p>play</p>
+				<p>with</p>
+				<p>art</p>
+			</div>
+			<div class="home-art-panels__panel panel4">
+				<p>create</p>
+				<p>one</p>
+				<p>masterpiece</p>
+			</div>
+			<div class="home-art-panels__panel panel5">
+				<p>new</p>
+				<p>thing</p>
+				<p>comes</p>
+			</div>
+		</div>
+	</section>
+<!-- End of Art panels -->
+
+<!-- Infographics -->
+	<div class="home-intro__infographics">
+		<div class="home-intro__infographics__text">
+			<h3>Chúng tôi</h3>
+			<h3>truyền</h3>
+			<h3>cảm hứng</h3>
+		</div>
+		<div class="home-intro__infographics__holders">
+			<div class="home-intro__infographics__holders__holder">
+				<div class="span">tham gia</div>
+				<h1 class="red" data-inc-value="150" data-inc-duration="5000" data-inc-delay="1000">0</h1>
+				<h5>Dự án</h5>
+			</div>
+			<div class="home-intro__infographics__holders__holder">
+				<div class="span">phục vụ</div>
+				<h1 class="red" data-inc-value="25859" data-inc-duration="5000" data-inc-delay="1000">0</h1>
+				<h5>Tổ chức và khách hàng</h5>
+			</div>
+			<div class="home-intro__infographics__holders__holder">
+				<div class="span">trên</div>
+				<h1 class="red" data-inc-value="18" data-inc-duration="5000" data-inc-delay="1000">0</h1>
+				<h5>Quốc gia</h5>
+			</div>
+			<div class="home-intro__infographics__holders__holder">
+				<div class="span">với</div>
+				<h1 class="red" data-inc-value="15696" data-inc-duration="5000" data-inc-delay="1000">0</h1>
+				<h5>Tác phẩm</h5>
+			</div>
+			<div class="home-intro__infographics__holders__holder">
+				<div class="span">quy tụ</div>
+				<h1 class="red" data-inc-value="100" data-inc-duration="5000" data-inc-delay="1000">0</h1>
+				<h5>Nghệ sĩ</h5>
+			</div>
+		</div>
+	</div>
+	<div class="content-space-one">
+		<div class="text-wrap">
+			<h3>...Và chưa dừng lại...</h3>
+			<a class="btn btn-info" href="about.html">Xem thêm Về chúng tôi  <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+		</div>
+	</div>
+<!-- End of Infographic -->
+
+<div class="title">
+	<div class="title__cover title__cover--2">
+		<h3>Những tác phẩm được yêu thích nhất</h3>
+	</div>
+</div>
+
+<!-- Best sellers -->
+	<section id="home-best-sellers">
+
+		<!-- Item slider-->
+		<div class="container-fluid">
+
+		  <div class="row">
+		    <div class="col-xs-12 col-sm-12 col-md-12">
+		      <div class="carousel carousel-showmanymoveone slide" id="itemslider">
+		        <div class="carousel-inner">
+
+		          <div class="item active">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product0.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">THE KOSEQUENCE</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product1.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">MAYORAL KOŠULJA</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product11.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">PANTALONE TERI 2</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product9.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">CVETNA HALJINA</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product4.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">MAJICA FOTO</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product18.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">MAJICA MAYORAL</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		          <div class="item">
+		            <div class="col-xs-12 col-sm-6 col-md-2">
+		              <a href="products.html"><img src="images/products/product19.jpg" class="img-responsive center-block"></a>
+		              <h4 class="text-center">MAJICA MAYORAL</h4>
+		              <h5 class="text-center">VND 1,500,000</h5>
+		            </div>
+		          </div>
+
+		        </div>
+
+		        <div id="slider-control">
+		        <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="https://s12.postimg.org/uj3ffq90d/arrow_left.png" alt="Left" class="img-responsive"></a>
+		        <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="https://s12.postimg.org/djuh0gxst/arrow_right.png" alt="Right" class="img-responsive"></a>
+		      </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Item slider end-->
+	</section>
+
+<!-- End of Best sellers -->
+
+<!-- Home - Brands -->
+
+<h3 class="center">Làm đẹp không gian các văn phòng công nghệ hàng đầu thế giới</h3>
+
+	<section class="home-intro">
+		<div class="home-intro__brands">
+			<div class="home-intro__brands__holder">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Airbnb.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Medium.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Freshdesk.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Coursera.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Esoftflow.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Fsoft.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Niteco.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Bravebits.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Framgia.png" alt="">
+				<img class="home-intro__brands__holder__brand img-responsive" src="images/brands/Beeketing.png" alt="">
+			</div>
+		</div>
+	</section>
+
+<!-- End of Home - Brands -->
+
+<div class="title">
+	<div class="title__cover title__cover--1">
+		<h3 class="right">Chia sẻ bởi đối tác và khách hàng</h3>
+	</div>
+</div>
+
+<!-- Testimonials --> <!-- From Bootsnip.com/snippets/4n1yK -->
+	<section id="home-testimonials">
+        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+            <!-- Carousel Slides / Quotes -->
+            <div class="carousel-inner text-center">
+                <!-- Quote 1 -->
+                <div class="item active">
+                    <blockquote>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>Not only did I fall in love with this work — the complete experience was second to none! The artist did a fantastic job of packaging the artworks so it arrived safely, which it did in less time than expected!
+                                Highly recommend for everyone to visit Art without frame, even just one for a lifetime. Just do it! </p>
+                                <small class="lead">René<span> CEO of Esoftsystems</span></small>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+                <!-- Quote 2 -->
+                <div class="item">
+                    <blockquote>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>Hoàn hảo và tuyệt cú mèo!
+                                Tôi khó có thể tin được những tác phẩm nghệ thuật mang nhiều giá trị thế này lại có thể đến với mình nhanh chóng và hiệu quả đến vậy. Tranh thật, tinh thần thật, mọi công đoạn đều tinh tế từ trải nghiệm chọn, mua, nhận hàng và được chăm sóc. </p>
+                                <small class="lead">Lan Lê<span>  FPT Project manager</span></small>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+                   <!-- Quote 3 -->
+                <div class="item">
+                    <blockquote>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>Tôi hoàn toàn bị thuyết phục bởi những tác phẩm và cách thức tiếp cận của Art without frame. Các bạn đã nâng trải nghiệm xem và sở hữu các tác phẩm nghệ thuật chính gốc lên một tầm cao mới! Nó không còn đòi hỏi những nỗ lực và những lo lắng không cần thiết. Cảm ơn các bạn! </p>
+                                <small class="lead">Mỹ Tâm<span>  Ca sĩ</span></small>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <!-- Quote 4 -->
+                <div class="item">
+                    <blockquote>
+                        <div class="row">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <p>Tôi có một trải nghiệm tuyệt vời khi được tìm hiểu và tiếp cận các tác phẩm nghệ thuật đương đại từ AWF, được đóng góp sáng tạo và tạo ra sản phẩm là điểu thú vị nhất trong quá trình cộng tác với các bạn! Keep up the great work!  </p>
+                                <small class="lead">Thành Phong<span> Họa sĩ</span></small>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+            <!-- Bottom Carousel Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img class="img-responsive " src="images/agencies/avatar1.jpg" alt="">
+                </li>
+                <li data-target="#quote-carousel" data-slide-to="1"><img class="img-responsive" src="images/agencies/avatar2.jpg" alt="">
+                </li>
+                <li data-target="#quote-carousel" data-slide-to="2"><img class="img-responsive" src="images/agencies/avatar3.jpg" alt="">
+                </li>
+                <li data-target="#quote-carousel" data-slide-to="3"><img class="img-responsive" src="images/agencies/avatar4.jpg" alt="">
+                </li>
+
+            </ol>
+
+            <!-- Carousel Buttons Next/Prev -->
+            <!-- <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+            <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> -->
+        </div>
+	</section>
+<!-- End of Testimonial -->
+
+<div class="title">
+	<div class="title__cover title__cover--2">
+		<h3>Và bạn!</h3>
+		<p style="font-size: 1.25rem; padding: 0 2rem;">Lựa chọn hoàn hảo cho những tổ chức, cá nhân muốn tìm kiếm những tác phẩm nghệ thuật đầy sáng tạo và cảm hứng...</p>
+	</div>
+</div>
+
+<!-- Airbnb feature -->
+	<section id="home-airbnb-feature">
+
+		<div class="input-group">
+		  <input type="text" class="form-control" placeholder="Tìm kiếm tác phẩm theo mong muốn của bạn…">
+		  <span class="input-group-btn">
+		    <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+		  </span>
+		</div><!-- /input-group -->
+		<div class="home-airbnb-holder home-airbnb-cover img-responsive">
+				<div class="gradient"></div>
+				<h3 class="home-airbnb-holder--h3">Life is better with great art</h3>
+				<a class="btn btn-info" href="products.html">Bắt đầu khám phá ngay</a>
+				<div class="home-airbnb-holder--space"></div>
+				<div class="home-airbnb-holder__footer">
+					<div class="home-airbnb-holder__footer__logo1">
+						<img class="img-responsive" src="images/brands/Airbnb.png" alt="Airbnb logo">
+					</div>
+					<div class="home-airbnb-holder__footer__logo2">
+						<img class="img-responsive" src="images/logo/logo.png" alt="Art without frame logo">
+					</div>
+				</div>
+
+
+		</div>
+	</section>
+<!-- End of Airbnb feature -->
+
+<!-- Footer -->
+	<section class="footer">
+		<div class="footer__subscription">
+			<div class="footer__subscription__content">
+				<div class="footer__subscription__content__customer-support">
+					<i class="fa fa-paper-plane" aria-hidden="true"></i>
+					<div>
+						<h6>Nhận thông tin từ AWF</h6>
+						<p>Chăm sóc khách hàng (+84) 1649 606 906 (ex: 01-05)</p>
+					</div>
+				</div>
+				<div class="footer__subscription__content__input-group">
+					<input type="email" class="form-control" name="Email" id="email" placeholder="phuchoang.inf@gmail.com"/>
+					<button class="btn btn-info">Đăng ký</button>
+				</div>
+			</div>
+		</div>
+		<div class="footer__info">
+			<div class="footer__info__element">
+				<h6>Art without frame</h6>
+				<ul>
+					<li>Trang chủ</li>
+					<li>Về chúng tôi</li>
+					<li>Liên hệ</li>
+				</ul>
+			</div>
+			<div class="footer__info__element">
+				<h6>Khách hàng</h6>
+				<ul>
+					<li>Sản phẩm</li>
+					<li>Điều khoản & dịch vụ</li>
+					<li>Chính sách đổi trả</li>
+				</ul>
+			</div>
+			<div class="footer__info__element">
+				<h6>Họa sĩ của AWF</h6>
+				<ul>
+					<li>Giới thiệu</li>
+					<li>Portfolios</li>
+					<li>Hoạt động</li>
+				</ul>
+			</div>
+			<div class="footer__info__element">
+				<h6>Mở rộng</h6>
+				<ul>
+					<li>Tin tức</li>
+					<li>Liên kết</li>
+					<li>Đối tác</li>
+				</ul>
+			</div>
+
+			<div class="footer__info__payments">
+				<select name="language" class="selectpicker" data-width="100%">
+				  <option>Tiếng Việt</option>
+				  <option>English</option>
+				  <option>French</option>
+				</select>
+				<select name="currency" class="selectpicker" data-width="100%">
+					<option>VND</option>
+					<option>USD</option>
+					<option>EURO</option>
+				</select>
+
+				<div class="footer__info__payments__icons">
+					<i class="fa fa-cc-discover" aria-hidden="true"></i>
+					<i class="fa fa-cc-visa" aria-hidden="true"></i>
+					<i class="fa fa-cc-paypal" aria-hidden="true"></i>
+					<i class="fa fa-cc-jcb" aria-hidden="true"></i>
+					<i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+					<i class="fa fa-cc-stripe" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
+		<div class="footer__socials">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			<i class="fa fa-twitter" aria-hidden="true"></i>
+			<i class="fa fa-google-plus" aria-hidden="true"></i>
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+			<i class="fa fa-pinterest" aria-hidden="true"></i>
+			<i class="fa fa-deviantart" aria-hidden="true"></i>
+		</div>
+		<div class="footer__copyright">
+				<div class="wrapper">
+					<img src="images/logo/logo.png" alt="logo">
+					<span>® Artwithoutframe.com and Awf.com - by Art without frame, inc.</span>
+					<span style="flex: 1; text-align: right; padding-right: 2rem">A <a href="https://techmaster.vn">Techmaster.vn</a> project - All right reserved © designed by <a href="https://github.com/spideyinf">Phuchoang</a></span>
+				</div>
+		</div>
+	</section>
+<!-- End of Footer -->
+
+ 	<!-- bower:js -->
+ 	<script src="bower_components/jquery/dist/jquery.js"></script>
+ 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+ 	<!-- <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
+ 	<script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+ 	<!-- <script src="bower_components/masonry/dist/masonry.pkgd.js"></script>
+ 	<script src="bower_components/infinite-scroll/dist/infinite-scroll.pkgd.js"></script>
+ 	<script src="bower_components/ev-emitter/ev-emitter.js"></script>
+ 	<script src="bower_components/imagesloaded/imagesloaded.js"></script>
+ 	<script src="bower_components/jquery-touchswipe/jquery.touchSwipe.js"></script> -->
+ 	<!-- endbower -->
+ 	<script src="dist/main.min.js"></script>
+</body>
+</html>
+
