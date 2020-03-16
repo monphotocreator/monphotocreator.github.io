@@ -1,28 +1,30 @@
 ﻿//Navbar control
 
-$(document).ready(function(){       
+$(document).ready(function(){
   var scroll_start = 0;
   var startchange = $('#startchange');
   var offset = startchange.offset();
 
   if ($(window).width() > 768) {
     if (startchange.length){
-      $(document).scroll(function() { 
+      $(document).scroll(function() {
         scroll_start = $(this).scrollTop();
           if(scroll_start > offset.top) {
-            $('.navbar-moving').css('background-color', 'rgba(15, 15, 15, 0.8)');
+              $('.navbar-moving').css('background-color', 'rgba(15, 15, 15, 0.8)');
               $('.nav-link, .nav-link__icon, .dropdown-toggle, .dropdown-toggle__icon, .caret.top').css('color', 'white');
+              $('.logo-brand').css('width', '80px');
             } else {
               $('.navbar-moving').css('background-color', 'transparent');
               $('.nav-link, .nav-link__icon, .dropdown-toggle, .dropdown-toggle__icon, .caret.top').css('color', '#BDBDBD');
-            }   
+              $('.logo-brand').css('width', '150px')
+            }
       });
     }
   }
 });
 
 //Modals control
-    
+
 
     $("#modal-login button").click(function(e){
         e.preventDefault();
@@ -83,7 +85,7 @@ $('.selectpicker').selectpicker({
   */
 
   'use strict';
-   
+
   function Inc(obj) {
     var elem = obj.elem;
     var input = (elem.nodeName.toLowerCase() === 'input') ? true: false;
@@ -145,7 +147,7 @@ $('.selectpicker').selectpicker({
       objs[2].reset();
     });
   }
-  
+
 //End of Number animation control
 
 
@@ -155,7 +157,7 @@ $(document).ready(function () {
     $('.dropdown-toggle').dropdown();
 });
 
- $(document).ready(function () { 
+ $(document).ready(function () {
     $(".selectpicker").selectpicker();
     $(".bootstrap-select").click(function () {
          $(this).addClass("open");
@@ -164,7 +166,7 @@ $(document).ready(function () {
 
  //Tooltip kickoff
  $(document).ready(function(){
-     $('[data-toggle="tooltip"]').tooltip();   
+     $('[data-toggle="tooltip"]').tooltip();
  });
 
  //See more - See less
@@ -172,7 +174,7 @@ $(document).ready(function () {
   var $this = $(this);
   $this.toggleClass('see-more-see-less');
   if($this.hasClass('see-more-see-less')){
-    $this.text('Xem thêm >');     
+    $this.text('Xem thêm >');
   } else {
     $this.text('Thu gọn <');
   }
@@ -208,10 +210,10 @@ $(document).ready(function () {
 
  //Home page - Carousel full screen function
 
-var $item = $('.carousel .full-screen'); 
+var $item = $('.carousel .full-screen');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
-$item.height($wHeight); 
+$item.height($wHeight);
 $item.addClass('full-screen');
 
 $('.carousel .full-responsive').each(function() {

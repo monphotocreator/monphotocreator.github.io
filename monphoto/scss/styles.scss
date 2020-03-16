@@ -48,7 +48,7 @@ $Oswald: 'Oswald', sans-serif;
 	font-size: 1.25rem;
 	font-weight: 300;
 	padding: 0.65rem 2rem;
-	
+
 	&:hover {
 		background: $darkblue !important;
 		color: white;
@@ -192,10 +192,11 @@ nav.stroke ul li a:hover:after {
 
 
 .logo-brand {
-	width: 180px; 
+	width: 180px;
 	height: auto;
-	margin-top: -.5rem; 
+	margin-top: -.5rem;
 	filter: drop-shadow(.5rem .5rem .5rem rgba(0, 0, 0, .35));
+	transition: all 0.5s ease-in-out;
 }
 
 .nav-item {
@@ -212,10 +213,10 @@ nav.stroke ul li a:hover:after {
 		background-color: $navbar-color;
 
 		.logo-brand {
-			width: 150px; 
+			width: 150px;
 			margin-top: -.5rem;
 		}
-		
+
 		button {
 			.icon-bar {
 				background-color: white !important;
@@ -236,7 +237,7 @@ nav.stroke ul li a:hover:after {
 	}
 }
 
-//Navbar-fixed 
+//Navbar-fixed
 
 .navbar-fixed {
 	position: fixed;
@@ -277,7 +278,7 @@ nav.stroke ul li a:hover:after {
 
   .wrapper {
   	max-width: 1170px;
-  	display: flex; 
+  	display: flex;
   	flex-direction: column;
 	align-items: center;
   }
@@ -318,7 +319,7 @@ nav.stroke ul li a:hover:after {
 .content-space-one {
 	padding: 0px;
 	margin-bottom: 0px;
-	background: url('../images/covers/cover-red.jpg') no-repeat center center fixed; 
+	background: url('../images/covers/cover-home-paralax.jpg') no-repeat center center fixed;
 	background-size: cover;
 	padding: 3rem 2rem;
 	display: flex;
@@ -356,7 +357,7 @@ nav.stroke ul li a:hover:after {
 	    		font-size: 1.45rem;
 	    		color: white;
 	    	}
-	    }	  
+	    }
 	}
 }
 
@@ -364,7 +365,7 @@ nav.stroke ul li a:hover:after {
   padding: 0px;
   margin-bottom: 0px;
   color: inherit;
-  background: url('../images/covers/Dancing-fire-Sztukowski.jpg') no-repeat center center fixed; 
+  background: url('../images/covers/Dancing-fire-Sztukowski.jpg') no-repeat center center fixed;
   background-size: cover;
   padding: 8rem 1rem 5rem;
   display: flex;
@@ -398,8 +399,8 @@ nav.stroke ul li a:hover:after {
       margin: .5rem 0;
       background-color: #fff;
       align-self: flex-end;
-      }	
-  	
+      }
+
 
 	  p {
 	  	text-transform: uppercase;
@@ -413,7 +414,7 @@ nav.stroke ul li a:hover:after {
   padding: 0px;
   margin-bottom: 1rem;
   color: inherit;
-  background: url('../images/covers/Simple color digital.jpg') no-repeat center center fixed; 
+  background: url('../images/covers/Simple color digital.jpg') no-repeat center center fixed;
   background-size: cover;
   padding: 8rem 1rem 5rem;
   display: flex;
@@ -448,8 +449,8 @@ nav.stroke ul li a:hover:after {
       margin: .5rem 0;
       background-color: #fff;
       align-self: flex-end;
-      }	
-  	
+      }
+
 
 	  p {
 	  	text-transform: uppercase;
@@ -493,7 +494,7 @@ nav.stroke ul li a:hover:after {
 		}
 	}
 
-	p {		
+	p {
 		font-size: 1.2rem;
 		color: white;
 		text-align: center;
@@ -520,17 +521,18 @@ nav.stroke ul li a:hover:after {
 		align-items: center;
 		justify-content: center;
 		margin-top: 3rem;
-		padding: 2rem 0 2rem 0;
+		padding: 3.5rem 0;
 		background-color: $lightgray;
+
 		&__holder {
 			max-width: 1170px;
 			width: 100%;
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 1rem 3.5rem;
 
 
 			&__brand {
-				padding: .25rem .5rem;
 				justify-self: center;
 				align-self: center;
 				filter: grayscale(100%);
@@ -547,7 +549,7 @@ nav.stroke ul li a:hover:after {
 		margin: 0 2rem 0 2rem;
 		padding: 3rem 0 3rem 0;
 		display: grid;
-		grid-template-columns: 1fr 5fr;
+		grid-template-columns: 1fr 3fr;
 
 		&__text {
 			display: flex;
@@ -557,7 +559,7 @@ nav.stroke ul li a:hover:after {
 
 		&__holders {
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 1fr);
 
 			&__holder {
 				justify-self: center;
@@ -586,7 +588,7 @@ nav.stroke ul li a:hover:after {
 	align-items: center;
 	justify-content: center;
 	margin: 3.5rem 0;
-	
+
 	&__cover {
 		max-width: 1170px;
 		width: 100%;
@@ -598,7 +600,7 @@ nav.stroke ul li a:hover:after {
 
 			&:before {
 				content: '';
-				display: inline;
+				display: inline-block;
 				position: absolute;
 				background-color: $red;
 				height: 100%;
@@ -608,7 +610,7 @@ nav.stroke ul li a:hover:after {
 
 			&:after {
 				content: '';
-				display: inline;
+				display: inline-block;
 				position: absolute;
 				background-color: $red;
 				height: 100%;
@@ -616,7 +618,7 @@ nav.stroke ul li a:hover:after {
 				right: 0;
 			}
 		}
-		
+
 		&--1 {
 			h3:before {
 				display: none;
@@ -629,252 +631,8 @@ nav.stroke ul li a:hover:after {
 			}
 		}
 	}
-	
+
 }
-
-
-
-#home-art-panels {
-	padding: 3.5rem 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: url('../images/covers/cover-red.jpg') no-repeat center center fixed; 
-	background-size: cover;
-	position: relative;
-	
-	.color-cover {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		background-image: linear-gradient( rgba(0, 0, 0, 0), black );
-		top: 0;
-		bottom: 0;
-	}
-
-	.home-art-panels {
-		max-width: 1170px;
-		width: 100%;
-		z-index: 10;
-		overflow: hidden;
-		display: flex;
-
-
-		&__panel {
-			min-height: 90vh;
-			width: 100%;
-			box-shadow: inset 0 0 0 .25rem rgba(255,255,255,0.05);
-			text-align: center;
-			align-items: center;
-			transition:
-			  font-size 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-			  flex 0.6s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-			  background 0.3s;
-			font-size: 1.2rem;
-			background-size: cover;
-			background-position: center;
-			flex: 1;
-			justify-content: center;
-			align-items: center;
-			display: flex;
-			flex-direction: column;
-			cursor: pointer;
-
-			p {
-				font-family: 'Streamster';
-				font-size: 3rem;
-				padding: .5rem;
-				color: white;
-				text-shadow: 0 0 4px rgba(0, 0, 0, 0.75), 0 0 10px rgba(0, 0, 0, 0.35);
-				transition: linear .5s;
-			}
-
-			p:nth-child(2){
-				font-family: 'Deadstock';
-				font-size: 4rem;
-				flex: 2;
-			}
-
-			> * {
-				margin:0;
-				width: 100%;
-				transition: transform 0.5s;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			> *:first-child { transform: translateY(-100%); }
-
-			> *:last-child {transform: translateY(100%);}
-		}
-	}
-
-	.panel1 { background-image: url('../images/panels/panel1.jpg'); }
-	.panel2 { background-image: url('../images/panels/panel2.jpg'); }
-	.panel3 { background-image: url('../images/panels/panel3.jpg'); }
-	.panel4 { background-image: url('../images/panels/panel4.jpg'); }
-	.panel5 { background-image: url('../images/panels/panel5.jpg'); }
-
-	.home-art-panels__panel.open-active > *:first-child {transform: translateY(0);}    
-
-	.home-art-panels__panel.open-active > *:last-child {transform: translateY(0);}
-
-
-	.home-art-panels__panel.open {
-	  font-size: 3rem;
-	  flex: 5;
-
-	  p:nth-child(2){
-	  	font-size: 5rem;
-	  	color: $red;
-	  }
-	}
-}
-
-//Best seller
-
-#home-best-sellers {
-	margin: 2.5rem 0;
-
-	#slider-text{
-	  padding-top: 40px;
-	  display: block;
-	}
-	#slider-text .col-md-6{
-	  overflow: hidden;
-	}
-
-	#itemslider h4{
-	  font-size: 1.25rem;
-	  margin: 10px auto 3px;
-	  color: $red;
-	}
-	#itemslider h5{
-	  font-size: 1.1rem;
-	  color: $blue;
-	  margin: 3px auto 2px;
-	}
-	#itemslider h6{
-	  font-weight: 300;;
-	  font-size: .75rem;
-	  margin: 2px auto 5px;
-	}
-
-	#slider-control img{
-	  padding-top: 200%;
-	  margin: 0 auto;
-	}
-
-	@media screen and (max-width: 992px){
-		#slider-control img {
-		  padding-top: 70px;
-		  margin: 0 auto;
-		}
-	}
-
-	.carousel-showmanymoveone .carousel-control {
-	  width: 4%;
-	  background-image: none;
-	}
-	.carousel-showmanymoveone .carousel-control.left {
-	  margin-left: 5px;
-	}
-	.carousel-showmanymoveone .carousel-control.right {
-	  margin-right: 5px;
-	}
-	.carousel-showmanymoveone .cloneditem-1,
-	.carousel-showmanymoveone .cloneditem-2,
-	.carousel-showmanymoveone .cloneditem-3,
-	.carousel-showmanymoveone .cloneditem-4,
-	.carousel-showmanymoveone .cloneditem-5 {
-	  display: none;
-	}
-	@media all and (min-width: 768px) {
-	  .carousel-showmanymoveone .carousel-inner > .active.left,
-	  .carousel-showmanymoveone .carousel-inner > .prev {
-	    left: -50%;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .active.right,
-	  .carousel-showmanymoveone .carousel-inner > .next {
-	    left: 50%;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .left,
-	  .carousel-showmanymoveone .carousel-inner > .prev.right,
-	  .carousel-showmanymoveone .carousel-inner > .active {
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-1 {
-	    display: block;
-	  }
-	}
-	@media all and (min-width: 768px) and (transform-3d), all and (min-width: 768px) and (-webkit-transform-3d) {
-	  .carousel-showmanymoveone .carousel-inner > .item.active.right,
-	  .carousel-showmanymoveone .carousel-inner > .item.next {
-	    -webkit-transform: translate3d(50%, 0, 0);
-	    transform: translate3d(50%, 0, 0);
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .item.active.left,
-	  .carousel-showmanymoveone .carousel-inner > .item.prev {
-	    -webkit-transform: translate3d(-50%, 0, 0);
-	    transform: translate3d(-50%, 0, 0);
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .item.left,
-	  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
-	  .carousel-showmanymoveone .carousel-inner > .item.active {
-	    -webkit-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
-	    left: 0;
-	  }
-	}
-	@media all and (min-width: 992px) {
-	  .carousel-showmanymoveone .carousel-inner > .active.left,
-	  .carousel-showmanymoveone .carousel-inner > .prev {
-	    left: -16.666%;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .active.right,
-	  .carousel-showmanymoveone .carousel-inner > .next {
-	    left: 16.666%;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .left,
-	  .carousel-showmanymoveone .carousel-inner > .prev.right,
-	  .carousel-showmanymoveone .carousel-inner > .active {
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-2,
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-3,
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-4,
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-5,
-	  .carousel-showmanymoveone .carousel-inner .cloneditem-6  {
-	    display: block;
-	  }
-	}
-	@media all and (min-width: 992px) and (transform-3d), all and (min-width: 992px) and (-webkit-transform-3d) {
-	  .carousel-showmanymoveone .carousel-inner > .item.active.right,
-	  .carousel-showmanymoveone .carousel-inner > .item.next {
-	    -webkit-transform: translate3d(16.666%, 0, 0);
-	    transform: translate3d(16.666%, 0, 0);
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .item.active.left,
-	  .carousel-showmanymoveone .carousel-inner > .item.prev {
-	    -webkit-transform: translate3d(-16.666%, 0, 0);
-	    transform: translate3d(-16.666%, 0, 0);
-	    left: 0;
-	  }
-	  .carousel-showmanymoveone .carousel-inner > .item.left,
-	  .carousel-showmanymoveone .carousel-inner > .item.prev.right,
-	  .carousel-showmanymoveone .carousel-inner > .item.active {
-	    -webkit-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
-	    left: 0;
-	  }
-	}
-}
-
 
 //Air-bnb feature
 
@@ -897,7 +655,7 @@ nav.stroke ul li a:hover:after {
 			width: 100%;
 			font-size: 1.25rem;
 		}
-		
+
 		.input-group-btn {
 			width: auto;
 
@@ -912,7 +670,7 @@ nav.stroke ul li a:hover:after {
 					font-size: 1.5rem;
 				}
 			}
-		}	
+		}
 	}
 
 	.home-airbnb-holder {
@@ -923,7 +681,7 @@ nav.stroke ul li a:hover:after {
 		flex-direction: column;
 		align-items: center;
 		position: relative;
-		
+
 		&--h3 {
 			font-family: 'Deadstock';
 			font-size: 4.5rem;
@@ -961,7 +719,7 @@ nav.stroke ul li a:hover:after {
 		&__footer {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: flex-end;
 			width: 100%;
 
 			&__logo1 {
@@ -989,8 +747,8 @@ nav.stroke ul li a:hover:after {
 
 	}
 
-	.home-airbnb-cover { 
-		background: url('../images/airbnb-cover/airbnb-cover.jpg') no-repeat center center fixed; 
+	.home-airbnb-cover {
+		background: url('../images/airbnb-cover/airbnb-cover.jpg') no-repeat center center fixed;
 		background-size: cover;
 		width: 100%;
 		height: 90vh;
@@ -1012,7 +770,8 @@ nav.stroke ul li a:hover:after {
 	    // padding: 0 10px 30px 10px;
 	    margin-top: 10px;
 	    width: 100%;
-	    max-width: 1440px;
+			max-width: 1440px;
+			min-height: 300px;
 
 	    .carousel-control {
     	    background: none;
@@ -1114,7 +873,7 @@ nav.stroke ul li a:hover:after {
 			@media (max-width: 425px) {
 				flex-direction: column;
 			}
-			
+
 			&__customer-support {
 				display: flex;
 				align-items: center;
@@ -1134,7 +893,7 @@ nav.stroke ul li a:hover:after {
 					> * { color: white;}
 				}
 			}
-			
+
 			&__input-group {
 				display: flex;
 				align-items: center;
@@ -1162,8 +921,8 @@ nav.stroke ul li a:hover:after {
 
 				@media (max-width: 425px) {
 					padding: .5rem 2rem;
-				}	
-			}		
+				}
+			}
 		}
 	}
 
@@ -1171,7 +930,7 @@ nav.stroke ul li a:hover:after {
 		max-width: 1170px;
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(4, 2fr) 3fr;
+		grid-template-columns: repeat(3, 3fr);
 
 		@media (max-width: 768px) {
 			grid-template-columns: repeat(4, 1fr);
@@ -1226,7 +985,7 @@ nav.stroke ul li a:hover:after {
 						display: inline;
 					}
 				}
-			}	
+			}
 		}
 
 		&__payments {
@@ -1245,7 +1004,7 @@ nav.stroke ul li a:hover:after {
 			}
 
 			> *:last-child {
-				margin: 1rem 0;
+				margin: auto 0 0.5rem;
 			}
 
 			&__icons {
@@ -1285,7 +1044,6 @@ nav.stroke ul li a:hover:after {
 		height: 3.2rem;
 		border-top: 1.25px solid $darkgray;
 		border-bottom: 1.25px solid $darkgray;
-		margin-bottom: 2rem;
 
 		i {
 			font-size: 1.55rem;
@@ -1301,13 +1059,13 @@ nav.stroke ul li a:hover:after {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		
+
 		.wrapper {
 			justify-content: space-between;
 
 			span {
 				color: $lightgray;
-				margin: 1rem 0 1rem .5rem;
+				margin: 1.25rem 0 1.25rem .5rem;
 
 				a {
 					color: $gray;
@@ -1319,7 +1077,7 @@ nav.stroke ul li a:hover:after {
 			}
 
 			img {
-				width: 7rem;
+				width: 5rem;
 				height: auto;
 				margin-left: 1rem;
 			}
@@ -1362,7 +1120,7 @@ nav.stroke ul li a:hover:after {
     background-image: url('../images/covers/cover-about.jpg');
 
     /* Full height */
-    height: 60vh; 
+    height: 60vh;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -1412,7 +1170,7 @@ nav.stroke ul li a:hover:after {
 				&:hover, &:focus {
 					filter: none;
 				}
-			}	
+			}
 		}
 	}
 
@@ -1421,7 +1179,7 @@ nav.stroke ul li a:hover:after {
 .about-core {
 	display: flex;
 	flex-direction: column;
-	
+
 	h3 {
 		padding: 3rem 0;
 	}
@@ -1436,7 +1194,7 @@ nav.stroke ul li a:hover:after {
 			background-size: cover;
 			background-position: center;
 			position: relative;
-			
+
 
 			&:hover > &__overlay, &:focus > &__overlay {
 				bottom: 0;
@@ -1454,7 +1212,7 @@ nav.stroke ul li a:hover:after {
 				display: none;
 				bottom: -5rem;
 				transition: all 3s linear;
-				
+
 				&__overlay1 {
 					background-color: rgba(15, 15, 15, 0.75);
 					flex: 4;
@@ -1472,7 +1230,7 @@ nav.stroke ul li a:hover:after {
 						text-align: center;
 					}
 
-					p {	
+					p {
 						color: $gray;
 						flex: 1;
 						margin: 60% 0 0;
@@ -1503,7 +1261,7 @@ nav.stroke ul li a:hover:after {
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
-					
+
 					h5 {
 						text-align: center;
 					}
@@ -1589,7 +1347,7 @@ nav.stroke ul li a:hover:after {
 		display: grid;
 		grid-template-columns: 3fr 4fr;
 		grid-gap: .5rem;
-		
+
 		@media (max-width: 690px) {
 			grid-template-columns: 1fr;
 		}
@@ -1699,7 +1457,7 @@ nav.stroke ul li a:hover:after {
 					}
 				}
 			}
-	
+
 			&__symbol {
 				border: 1px solid $black;
 				border-radius: 50%;
@@ -1868,8 +1626,8 @@ nav.stroke ul li a:hover:after {
 				text-transform: uppercase;
 				padding: 1.5rem 1rem !important;
 				border: none !important;
-			}	
-		}	
+			}
+		}
 	}
 
 	&__tbody {
@@ -1901,7 +1659,7 @@ nav.stroke ul li a:hover:after {
 			h5.price {
 				margin-top: auto;
 			}
-		}	
+		}
 	}
 
 	td {
@@ -1911,7 +1669,7 @@ nav.stroke ul li a:hover:after {
 
 //User - Round table
 
-table { 
+table {
     border-collapse: separate;
     border-radius: 1.25rem;
 }
@@ -1968,7 +1726,7 @@ tr:last-child td:last-child {
 			}
 			.item .thumb img, .item img {
 				width: 100%;
-				height: auto;	
+				height: auto;
 			}
 
 
@@ -1995,7 +1753,7 @@ tr:last-child td:last-child {
 					font-size: 1.15rem;
 					margin: 0 .5rem;
 				}
-				
+
 				span {
 					text-transform: uppercase;
 					background-color: $gray;
@@ -2012,7 +1770,7 @@ tr:last-child td:last-child {
 				display: flex;
 				flex-direction: column;
 				padding: 1rem 1rem 0;
-				
+
 				h6 {
 					font-size: 1.15rem;
 					margin-top: 1rem;
@@ -2033,7 +1791,7 @@ tr:last-child td:last-child {
 					padding: .5rem 0 3rem;
 					display: flex;
 					align-items: center;
-					
+
 					&__circle {
 						border: 1px solid $gray;
 						width: 2.25rem;
@@ -2056,9 +1814,9 @@ tr:last-child td:last-child {
 						&:hover {
 							background-color: white;
 							border: white;
-						} 
+						}
 					}
-				}		
+				}
 			}
 		}
 		button.cta {
@@ -2074,7 +1832,7 @@ tr:last-child td:last-child {
 		justify-content: center;
 		flex-direction: column;
 		padding: 1rem .5rem 0;
-		
+
 		&__wrapper {
 			max-width: 1170px;
 			width: 100%;
@@ -2096,10 +1854,10 @@ tr:last-child td:last-child {
 				margin-left: .5rem;
 				padding: .35rem 1.5rem;
 				transform: translateY(1.25rem);
-			}	
+			}
 		}
 
-		
+
 	}
 
 	&__comments {
@@ -2127,7 +1885,7 @@ tr:last-child td:last-child {
 				grid-gap: .5rem;
 				justify-self: center;
 				align-self: center;
-			
+
 				img {
 					width: 6rem;
 					height: auto;
@@ -2144,7 +1902,7 @@ tr:last-child td:last-child {
 						.lead {
 							align-self: flex-start;
 						}
-						
+
 					}
 
 					p:after, .title-comment:after {
@@ -2158,7 +1916,7 @@ tr:last-child td:last-child {
 
 				        @media (max-width: 425px) {
 				    		content: none;
-				    	}		
+				    	}
 					}
 
 					.star-rate:before, .star-rate:after {
@@ -2171,7 +1929,7 @@ tr:last-child td:last-child {
 						transform: translateY(-2px)
 					}
 
-					i { 
+					i {
 						color: $blue;
 						font-size: 1.15rem;
 					}
@@ -2206,7 +1964,7 @@ tr:last-child td:last-child {
 							align-self: flex-start;
 						}
 					}
-					
+
 					p:after, .title-comment:after {
 						content: "\f111";
 					    color: $gray;
@@ -2242,7 +2000,7 @@ tr:last-child td:last-child {
 					display: flex;
 					align-items: center;
 					margin-top: 1rem;
-					
+
 					.lead {
 						text-transform: uppercase;
 					}
@@ -2260,7 +2018,7 @@ tr:last-child td:last-child {
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
-					
+
 					div {
 						width: 49%;
 						padding: 1rem 0;
@@ -2273,7 +2031,7 @@ tr:last-child td:last-child {
 					transform: translateY(-1.5rem);
 				}
 			}
-		} 
+		}
 	}
 }
 
@@ -2311,7 +2069,7 @@ tr:last-child td:last-child {
                 color: $darkgray;
                 font-weight: 300;
                 text-transform: uppercase;
-				
+
 				sup {
 					font-weight: 200;
 					font-size: .8rem;
@@ -2418,7 +2176,7 @@ tr:last-child td:last-child {
   // float: left;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-position: center center !important; 
+  background-position: center center !important;
 }
 
 .grid__item--height1 { height: 285px; background: #EA0; }
@@ -2466,7 +2224,7 @@ tr:last-child td:last-child {
 		}
 
 		.input-group {
-		
+
 			button {
 				background-color: $blue;
 				border: 1px solid $blue;
@@ -2670,7 +2428,7 @@ tr:last-child td:last-child {
 		}
 	}
 
-	#modal-register {		
+	#modal-register {
 
 		button {
 			position: absolute;
@@ -2717,7 +2475,7 @@ tr:last-child td:last-child {
 	html {
 		font-size: 14px;
 	}
-	
+
 	.home-intro {
 		&__infographics {
 
@@ -2729,7 +2487,7 @@ tr:last-child td:last-child {
 				grid-template-columns: repeat(3, 1fr);
 				grid-gap: .75rem;
 			}
-		}		
+		}
 	}
 }
 
@@ -2770,7 +2528,7 @@ tr:last-child td:last-child {
 				grid-template-columns: 1fr;
 				grid-gap: 1rem;
 			}
-		}		
+		}
 	}
 }
 
