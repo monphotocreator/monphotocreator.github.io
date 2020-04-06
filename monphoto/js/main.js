@@ -24,8 +24,11 @@ $(document).ready(function () {
     $('.logo-brand').css('width', '68px');
   }
 
-  var twentytwenty = $("#container1");
-  twentytwenty && twentytwenty.twentytwenty();
+  var twentytwenty = $(".twentytwenty");
+  twentytwenty && twentytwenty.twentytwenty({
+    before_label: 'January 2017', // Set a custom before label
+    after_label: 'March 2017', // Set a custom after label
+  });
 });
 
 // Home -  Flex panel galery
