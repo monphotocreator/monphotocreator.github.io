@@ -37,7 +37,7 @@ InfiniteScroll.defaults.responseType = 'document';
 InfiniteScroll.create.pageLoad = function() {
   this.canLoad = true;
   this.on( 'scrollThreshold', this.onScrollThresholdLoad );
-  this.on( 'append', this.checkLastPage );
+  this.on( 'load', this.checkLastPage );
   if ( this.options.outlayer ) {
     this.on( 'append', this.onAppendOutlayer );
   }
@@ -65,7 +65,11 @@ proto.loadNextPage = function() {
     this.onPageError( error, path );
   }.bind( this );
 
-  request( path, this.options.responseType, onLoad, onError );
+  var onLast = function( response ) {
+    this.lastPageReached( response, path );
+  }.bind( this );
+
+  request( path, this.options.responseType, onLoad, onError, onLast );
   this.dispatchEvent( 'request', null, [ path ] );
 };
 
@@ -133,6 +137,8 @@ function refreshScripts( fragment ) {
     var script = scripts[i];
     var freshScript = document.createElement('script');
     copyAttributes( script, freshScript );
+    // copy inner script code. #718, #782
+    freshScript.innerHTML = script.innerHTML;
     script.parentNode.replaceChild( freshScript, script );
   }
 }
@@ -255,21 +261,26 @@ proto.getPrefillDistance = function() {
 };
 
 proto.stopPrefill = function() {
-  console.log('stopping prefill');
+  this.log('stopPrefill');
   this.off( 'append', this.prefill );
 };
 
 // -------------------------- request -------------------------- //
 
-function request( url, responseType, onLoad, onError ) {
+function request( url, responseType, onLoad, onError, onLast ) {
   var req = new XMLHttpRequest();
-  req.open( 'GET', url );
+  req.open( 'GET', url, true );
   // set responseType document to return DOM
   req.responseType = responseType || '';
+
+  // set X-Requested-With header to check that is ajax request
+  req.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
   req.onload = function() {
     if ( req.status == 200 ) {
       onLoad( req.response );
+    } else if ( req.status == 204 ) {
+      onLast( req.response );
     } else {
       // not 200 OK, error
       var error = new Error( req.statusText );

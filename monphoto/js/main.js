@@ -25,45 +25,8 @@ $(document).ready(function () {
   }
 
   var twentytwenty = $("#container1");
-
-  if (twentytwenty) {
-    $("#container1").twentytwenty();
-  }
+  twentytwenty && twentytwenty.twentytwenty();
 });
-
-//Modals control
-
-$("#modal-login button").click(function (e) {
-  e.preventDefault();
-  $("#account").html(`<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <img src='images/agencies/user-avatar.png' aria-hidden='true' />
-              </a>
-              <ul class='dropdown-menu' role='menu'>
-                <li><a href='user.html'>Thông tin tài khoản</a></li>
-                <li><a onclick='logout()'>Đăng xuất</a></li>
-              </ul>`);
-  $('.dropdown-toggle').dropdown();
-  $("#myModal").modal("toggle");
-});
-
-$("#modal-register button").click(function (e) {
-  e.preventDefault();
-  $("#myModal").modal("toggle");
-});
-
-function logout() {
-  $("#account").html(`
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="dropdown-toggle__icon fa fa-user-circle-o" aria-hidden="true"></i>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a id="login" href="" data-toggle="modal" data-target="#myModal">Đăng nhập</a></li>
-            <li><a id="register" href="">Đăng ký</a></li>
-          </ul>
-        `);
-  $('.dropdown-toggle').dropdown();
-}
-
 
 // Home -  Flex panel galery
 

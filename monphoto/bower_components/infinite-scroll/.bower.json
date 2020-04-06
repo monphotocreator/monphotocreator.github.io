@@ -34,15 +34,14 @@
     "package.json",
     "gulpfile.js"
   ],
-  "version": "3.0.1",
-  "_release": "3.0.1",
+  "version": "3.0.6",
+  "_release": "3.0.6",
   "_resolution": {
     "type": "version",
-    "tag": "v3.0.1",
-    "commit": "d013ec3b412aef165f8bc8e2d6ee431535bf710e"
+    "tag": "v3.0.6",
+    "commit": "f13cd9d9c45bdbbcb6e0f9b0f94a297cb19ded12"
   },
   "_source": "https://github.com/metafizzy/infinite-scroll.git",
   "_target": "^3.0.1",
-  "_originalSource": "infinite-scroll",
-  "_direct": true
+  "_originalSource": "infinite-scroll"
 }

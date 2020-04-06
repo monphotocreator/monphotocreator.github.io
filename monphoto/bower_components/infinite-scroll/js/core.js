@@ -89,8 +89,9 @@ proto.create = function() {
   this.pageIndex = 1; // default to first page
   this.loadCount = 0;
   this.updateGetPath();
-  // bail if getPath not set
-  if ( !this.getPath ) {
+  // bail if getPath not set, or returns falsey #776
+  var hasPath = this.getPath && this.getPath();
+  if ( !hasPath ) {
     console.error('Disabling InfiniteScroll');
     return;
   }
@@ -232,12 +233,16 @@ proto.updateGetPathTemplate = function( optPath ) {
   }.bind( this );
   // get pageIndex from location
   // convert path option into regex to look for pattern in location
-  var regexString = optPath.replace( '{{#}}', '(\\d\\d?\\d?)' );
+  // escape query (?) in url, allows for parsing GET parameters 
+  var regexString = optPath
+    .replace( /(\\\?|\?)/, '\\?' )
+    .replace( '{{#}}', '(\\d\\d?\\d?)' );
   var templateRe = new RegExp( regexString );
   var match = location.href.match( templateRe );
+
   if ( match ) {
     this.pageIndex = parseInt( match[1], 10 );
-    this.log( 'pageIndex', this.pageIndex, 'template string' );
+    this.log( 'pageIndex', [ this.pageIndex, 'template string' ] );
   }
 };
 
@@ -294,9 +299,17 @@ proto.updateGetAbsolutePath = function() {
   }
 
   var pathname = location.pathname;
+  // query parameter #829. example.com/?pg=2
+  var isQuery = path.match( /^\?/ );
+  if ( isQuery ) {
+    this.getAbsolutePath = function() {
+      return pathname + this.getPath();
+    };
+    return;
+  }
+
   // /foo/bar/index.html => /foo/bar
   var directory = pathname.substring( 0, pathname.lastIndexOf('/') );
-
   this.getAbsolutePath = function() {
     return directory + '/' + this.getPath();
   };
@@ -331,6 +344,10 @@ proto.destroy = function() {
 
   delete this.element.infiniteScrollGUID;
   delete instances[ this.guid ];
+  // remove jQuery data. #807
+  if ( jQuery && this.$element ) {
+    jQuery.removeData( this.element, 'infiniteScroll' );
+  }
 };
 
 // -------------------------- utilities -------------------------- //
@@ -371,6 +388,9 @@ InfiniteScroll.setJQuery = function( $ ) {
 // -------------------------- setup -------------------------- //
 
 utils.htmlInit( InfiniteScroll, 'infinite-scroll' );
+
+// add noop _init method for jQuery Bridget. #768
+proto._init = function() {};
 
 if ( jQuery && jQuery.bridget ) {
   jQuery.bridget( 'infiniteScroll', InfiniteScroll );

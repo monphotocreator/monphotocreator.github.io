@@ -1,12 +1,12 @@
 /*!
- * Infinite Scroll v3.0.1
+ * Infinite Scroll v3.0.6
  * Automatically add next page
  *
  * Licensed GPLv3 for open source use
  * or Infinite Scroll Commercial License for commercial use
  *
  * https://infinite-scroll.com
- * Copyright 2017 Metafizzy
+ * Copyright 2018 Metafizzy
  */
 
 ( function( window, factory ) {
