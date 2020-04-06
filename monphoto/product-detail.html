@@ -1,571 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Art without frame - Product detail</title>
-	<link rel="shortcut icon" href="images/logo/favicon.ico" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">  
- 	<!-- bower:css -->
- 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
- 	<link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
- 	<link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
- 	<link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
- 	<link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
- 	<!-- endbower --> 	
- 	<link type="text/css" rel="stylesheet" href="dist/styles.min.css">
+  <title>Monphoto - Product detail</title>
+  <link rel="shortcut icon" href="images/logo/favicon.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+  <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
+  <link rel="stylesheet" href="bower_components/twentytwenty/css/twentytwenty-no-compass.css" />
+  <!-- endbower -->
+  <link type="text/css" rel="stylesheet" href="dist/styles.min.css">
 </head>
-<body >
 
-<!-- Navbar -->	
-	<nav class="navbar navbar-default navbar-fixed" role="navigation">
-	 <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="home.html"><img class="logo-brand" src="images/logo/logo.png" alt=""></a>
-	    </div>
+<body>
+  <!-- Navbar and Carousel + Parallax effects thanks to @taylorgrendel  -->
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-moving" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img class="logo-brand" src="images/logo/logo-reverse.png"
+            alt="Logo reverse"></a>
+      </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <nav class="stroke">
-	      	<ul class="nav navbar-nav navbar-right">
-	      	  <li class="nav-item">
-	      	  	<a class="nav-link" href="home.html">Trang chủ <span class="sr-only">(current)</span></a>
-	      	  </li>
-	      	  <li class="nav-item">
-	      	  	<a class="nav-link" href="about.html">Về chúng tôi</a>
-	      	  </li>
-	      	
-	      	  <li class="dropdown active">
-	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm <span class="caret top"></span></a>
-	      	    <ul class="dropdown-menu" role="menu">
-	      	      <li><a href="products.html#">Sơn dầu</a></li>
-	      	      <li><a href="products.html#">Màu nước</a></li>
-	      	      <li><a href="products.html#">Sắp đặt</a></li>
-	      	      <li><a href="products.html#">Digital Art</a></li>
-	      	      <li><a href="products.html#">Calligraphy</a></li>
-	      	      <li class="divider"></li>
-	      	      <li><a href="products.html#">Photography (BETA)</a></li>
-	      	      <li><a href="products.html#">Mixed Media (BETA)</a></li>
-	      	    </ul>
-	      	  </li>
-	      	  <li class="dropdown">
-	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mở rộng <span class="caret top"></span></a>
-	      	    <ul class="dropdown-menu" role="menu">
-	      	      <li><a href="#">Dành cho đối tác</a></li>
-  	      	      <li><a href="#">Họa sĩ của AWF</a></li>
-	      	      <li class="divider"></li>
-	      	      <li><a href="#">Chương trình khuyến mãi</a></li>
-	      	    </ul>
-	      	  </li>
-	      	  <li class="dropdown" id="account">
-	      	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	      	    	<i class="dropdown-toggle__icon fa fa-user-circle-o" aria-hidden="true"></i>
-	      	    </a>
-	      	    <ul class="dropdown-menu" role="menu">
-	      	      <li><a id="login" href="#modal-login" data-toggle="modal" data-target="#myModal">Đăng nhập</a></li>
-	      	      <li><a id="register" href="#modal-register" data-toggle="modal" data-target="#myModal">Đăng ký</a></li>
-	      	    </ul>
-	      	  </li>
-	      	  <li class="nav-item">
-	      	  	<a class="nav-link" href=""><i class="nav-link__icon fa fa-shopping-cart" aria-hidden="true"></i> <sup><span class="badge">0</span></sup></a>
-	      	  </li>
-	      	
-	      	</ul>
-	      </nav>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <nav class="stroke">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
 
-<!-- Modals -->
-<!-- Modal Login-->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	          <ul class="nav nav-pills nav-justified">
-	            <li class="active"><a data-toggle="tab" href="#modal-login" style="font-size: 1.15rem;">ĐĂNG NHẬP</a></li>
-	            <li><a data-toggle="tab" href="#modal-register" style="font-size: 1.15rem;">ĐĂNG KÝ TÀI KHOẢN</a></li>
-	          </ul>
-	      </div>
-	      <div class="modal-body">
-	        <div class="tab-content">
-	          <div id="modal-login" class="tab-pane fade in active">
-	              <form>
-	                <label>Email: </label><br/><input class="form-control" type="email" name="username" placeholder="phuchoang.inf@gmail.com" /><br />
-	                <label>Mật khẩu: </label><br/><input class="form-control" type="password" name="password" placeholder="**********" /><br />
-	                <button class="btn btn-info">Đăng nhập</button>
-	              </form>
-	          </div>
-	          <div id="modal-register" class="tab-pane fade">
-	            <form>
-	              <label>Địa chỉ Email: </label><br /><input class="form-control" type="email" name="email" placeholder="Email" /><br />
-	              <label>Họ và tên: </label><br /><input class="form-control" name="name" placeholder="Họ tên" /> <br />
-	              <label>Mật khẩu: </label><br /><input class="form-control" type="password" name="password" placeholder="Mật khẩu" /><br/>
-	              <label>Xác nhận mật khẩu: </label><br /><input class="form-control" type="password" name="repassword" placeholder="Xác nhận mật khẩu" /> <br />
-	              <button class="btn btn-info">Đăng ký tài khoản</button>
-	            </form>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-<!-- End of Modals -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Photo Editing <span
+                  class="caret top"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="product-detail.html">Basic</a></li>
+                <li><a href="product-detail.html">Standard</a></li>
+                <li><a href="product-detail.html">Premium</a></li>
+                <li><a href="product-detail.html">Hotel</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Floorplans<span class="caret top"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Black and White</a></li>
+                <li><a href="#">Color</a></li>
+                <li><a href="#">3D Color</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Virtual Staging<span
+                  class="caret top"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Normal</a></li>
+                <li><a href="#">Renovation</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Day to Dusk</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Basic</a></li>
+                <li><a href="#">Advance</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portrait</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Basic</a></li>
+                <li><a href="#">Advance</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div id="startchange"></div>
 
-<!-- Products  -->
-<div class="content-block-one">
-	<div class="wrapper">
-		<h4>Chi tiết sản phẩm</h4>
-		    <p>Art without frame chú trọng đến từng tiểu tiết của sản phẩm từ kiểm định bảo quản, đóng gói, vận chuyển vì hơn ai hết chúng tôi hiểu đây là những tác phẩm nghệ thuật được trao đến khách hàng.</p>
-	</div>
-</div>
-<div class="content-space-three">
-	<div class="text-wrap">
-		<blockquote>
-			<h2>Creativity is intelligence having fun.</h2>
-		</blockquote>
-		        <div class="page-break"></div>
-		    <p style="text-align: right">Albert Einstein</p>
-	</div>
-</div>
+  <div class="content-space-three">
+    <div class="text-wrap">
+      <blockquote>
+        <h2>Creativity is intelligence having fun.</h2>
+      </blockquote>
+      <div class="page-break"></div>
+      <p style="text-align: right">Albert Einstein</p>
+    </div>
+  </div>
 
-<!-- Full product detail -->
-	<section id="product-detail">
-		<div class="product-detail">
-			<div class="product-detail__title">
-				<h4>Signature Liza portrait - Oilpainting/Wall panel</h4>
-				<p class="lead">Tác giả: Minerva McGonagall</p>
-				<h5 class="product-detail__info__options__price blue">VND 3,500,000</h5>
-			</div>
-			<div class="product-detail__info">
-				<div class="product-detail__info__illus">
-					<!-- Product - Carousel slide --> 
-						 <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="false">
-						     <div class="carousel-inner">
-						         <div class="item" data-thumb="0">
-						             <img class="img-responsive" src="images/product-detail/woman/signature-woman1.jpg">
-						         </div>
-						         <div class="item active" data-thumb="0">
-						             <img class="img-responsive" src="images/product-detail/woman/signature-woman2.jpg">
-						         </div>
-						         <div class="item" data-thumb="0">
-						             <img class="img-responsive" src="images/product-detail/woman/signature-woman3.jpg">
-						         </div>
-						         <div class="item" data-thumb="0">
-						             <img class="img-responsive" src="images/product-detail/woman/signature-woman4.jpg">
-						         </div>
-						         <div class="item" data-thumb="1">
-						             <img class="img-responsive" src="images/product-detail/woman/signature-woman5.jpg">
-						         </div>
-						     </div>
-						 </div> 
-						 <div class="clearfix">
-						 <div id="thumbcarousel" class="carousel slide" data-type="multi" data-interval="false">
-						     <div class="carousel-inner">
-						         <div class="item active">
-						             <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="images/product-detail/woman/signature-woman1.jpg"></div>
-						             <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="images/product-detail/woman/signature-woman2.jpg"></div>
-						             <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="images/product-detail/woman/signature-woman3.jpg"></div>
-						             <div data-target="#carousel" data-slide-to="3" class="thumb"><img src="images/product-detail/woman/signature-woman4.jpg"></div>
-						         </div><!-- /item -->
-						         <div class="item">
-						             <div data-target="#carousel" data-slide-to="4" class="thumb"><img src="images/product-detail/woman/signature-woman5.jpg"></div>
-						         </div><!-- /item -->
-						     </div><!-- /carousel-inner -->
-						     <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-						         <span class="glyphicon glyphicon-chevron-left"></span>
-						     </a>
-						     <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-						         <span class="glyphicon glyphicon-chevron-right"></span>
-						     </a>
-						 </div> <!-- /thumbcarousel -->
-						 </div><!-- /clearfix -->
-					<!-- End of Product - Carousel slide -->
-				</div>
-				<div class="product-detail__info__options">
-					<div class="product-detail__info__options__tags">
-						<i class="fa fa-tag" aria-hidden="true"></i>
-						<span>Sơn dầu</span>
-						<span>Trừu tượng</span>
-						<span>Panel</span>
-					</div>
-					<div class="product-detail__info__options__detail">
-						<h6>Thông tin: </h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam odit optio. Ratione laborum ex accusamus saepe ab nam cupiditate impedit rem dolore veniam neque, deserunt nostrum nisi sapiente fugit hic porro quisquam dicta veritatis laboriosam ad doloribus. Consequuntur aliquid a laborum ut quo assumenda ipsum iste architecto, sunt saepe eius ex enim tempora reiciendis incidunt, ipsam consectetur eum quae alias aut! Quas placeat ab, velit aliquam repellat sequi aperiam eligendi delectus dolorum, quia, esse debitis libero expedita deleniti beatae magni doloribus natus voluptates suscipit voluptatum recusandae et impedit! Ea minima nesciunt, voluptates eveniet culpa nihil eligendi dicta voluptatum saepe.</p>
-						<h6>Tình trạng:</h6>
-						<p>1 bản vẽ gốc và không giới hạn các bản in panel</p>
-						<h6>Phương thức & chi phí giao hàng:</h6>
-						<a href="">Xem thêm</a>
-						<div class="product-detail__info__options__detail__selects">
-							<div>
-								<h6>Chọn loại sản phẩm</h6>
-								<select class="selectpicker" data-width="100%" name="product-type">
-									<option value="" selected="selected">-- Chọn sản phẩm --</option>
-									<option value="VND 35,000,000">Bản vẽ gốc 78W x50H - VND 28,000,000</option>
-									<option value="VND 2,500,000">34W x 21H (8x16 x2pcs, 6x18 x3pcs) canvas treo tường - VND 2,500,000</option>
-									<option value="VND 3,500,000">44W x28H (10x20 x2pcs, 8x24 x3pcs ) canvas treo tường - VND 3,500,000</option>
-									<option value="VND 4,500,000">68W x44H (16x32 x2pcs, 12x36 x3pcs) canvas treo tường - VND 4,500,000</option>
-									<option value="VND 5,500,000">78W x50H (18x36 x2pcs, 14x42 x3pcs) canvas treo tường - VND 5,500,000</option>
-								</select>
-							</div>
-							<div>
-								<h6>Số lượng</h6>
-								<select class="selectpicker" data-width="100%" name="product-quantity">
-									<option selected="selected" value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-									<option value="6">6</option>
-									<option value="7">7</option>
-									<option value="8">8</option>
-									<option value="9">9</option>
-									<option value="">10+ Liên hệ</option>
-								</select>
-							</div>
-						</div><!-- end of selects -->
-						<div class="product-detail__info__options__detail__socials">
-							<div class="product-detail__info__options__detail__socials__circle">
-								<a href=""><i class="fa fa-heart-o" data-toggle="tooltip" title="Thêm vào Yêu thích"></i></a>
-							</div>
-							<div class="product-detail__info__options__detail__socials__circle">
-								<a href=""><i class="fa fa-facebook"></i></a>
-							</div>
-							<div class="product-detail__info__options__detail__socials__circle">
-								<a href=""><i class="fa fa-twitter"></i></a>
-							</div>
-							<div class="product-detail__info__options__detail__socials__circle">
-								<a href=""><i class="fa fa-google-plus"></i></a>
-							</div>
-						</div><!-- end of options-detail-socials -->
-					</div><!-- end of detail -->
-					<button class="btn btn-info cta">Thêm vào giỏ hàng</button>
-				</div><!-- end of options -->
-			</div><!-- end of info -->
-			<div class="title">
-				<div class="title__cover title__cover--2">
-					<h3>Tác giả</h3>
-				</div>
-			</div>
-			<div class="product-detail__author">
-				<div class="product-detail__author__wrapper">
-					<h5>Về <a href="">Minerva McGonagall</a></h5>
-					<p class="lead">Member of Hogwarts Art Associations - Feature artist at all Muggle art forums</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id praesentium saepe earum expedita, tenetur magnam explicabo alias illum temporibus cum et nihil culpa sequi corrupti iste nobis eveniet soluta, animi deleniti at! Pariatur voluptatum tenetur ea quasi nesciunt possimus sed quos debitis. Assumenda ullam, veniam nam deleniti distinctio quam pariatur nesciunt repudiandae ex, explicabo eius recusandae tenetur blanditiis quo adipisci aperiam eos rem exercitationem enim. Laborum atque ad quisquam, minima recusandae nobis vero ipsa similique beatae magnam! Necessitatibus a praesentium nisi officia in quos qui molestiae dignissimos illum minima eligendi iure totam aperiam eum, mollitia ducimus nostrum. Fuga magnam, corporis.</p>
-					<div id="product-detail__author__expand" class="collapse">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id itaque hic aut eaque nobis expedita optio qui minima ipsum velit totam repellendus, dicta asperiores. Eum ipsam, illo debitis aperiam dolor, nesciunt provident alias ratione consequatur amet error expedita doloribus. Asperiores praesentium natus qui et, assumenda molestiae dicta consequuntur itaque laborum.</p>
-						<br>
-						<p>Exhibition</p>
-						<ul>
-							<li>2012 Members Exhibition Art Association Nürtingen</li>
-							<li>2013 Art Fair Cologne</li>
-							<li>2013 Context Art Miami</li>
-							<li>2014 Solo exhibition Buchhandwerk, Nürtingen</li>
-							<li>2014 Artist House at Art Association Nürtingen</li>
-							<li>2014 Municipal Gallery of Nürtingen, Kirchheim, Wendlingen</li>
-							<li>2015 Solo exhibition Buchhandwerk, Nürtingen</li>
-							<li>2015 Gallery The Unit London, London</li>
-							<li>2015 Gallery Die Treppe, Nürtingen </li>
-							<li>2016 PAK, Gistel (Belgique)</li>
-						</ul>
-					</div>
-					<button class="btn btn-info see-more-see-less" data-toggle="collapse" data-target="#product-detail__author__expand">Xem thêm ></button>
-				</div>
-			</div> <!-- end of author -->
-			
-			<div class="title">
-				<div class="title__cover title__cover--1">
-					<h3 class="right">Đánh giá</h3>
-				</div>
-			</div>
+  <!-- Full product detail -->
+  <section id="product-detail">
+    <div id="container1">
+      <!-- The before image is first -->
+      <img src="http://placehold.it/400x200&amp;text=1" />
+      <!-- The after image is last -->
+      <img src="http://placehold.it/400x200&amp;text=2" />
+    </div>
+  </section>
+  <!-- End of Full product detail -->
 
-			<div class="product-detail__comments">
-				<div class="product-detail__comments__wrapper">
-					<div class="product-detail__comments__wrapper__comment">
-						<img class="img-responsive" src="images/agencies/comment-avatar.png" alt="">
-						<div>
-							<div class="product-detail__comments__wrapper__comment__title">
-								<p class="lead">Fank</p>
-								<span>đã đánh giá</span>
-								<div class=star-rate>
-									<i class="fa fa-star blue"></i>
-									<i class="fa fa-star blue"></i>
-									<i class="fa fa-star blue"></i>
-									<i class="fa fa-star blue"></i>
-									<i class="fa fa-star blue"></i>
-								</div>
-								<span>2 tuần trước</span>
-								<div class="reply">
-									<i class="fa fa-reply" aria-hidden="true"></i>
-									<a href="#">Trả lời</a>
-								</div>
-							</div>
-							<p class="product-detail__comments__wrapper__comment__content">Tôi đã đặt mua bản in của tác phẩm này và rất hài lòng, chất lượng panel và màu sắc thật tuyệt. Mọi thứ thật sống động và hoàn hảo như một bức tranh vẽ canvas chính gốc. Cảm ơn AWF.</p>
-							<hr>
-						</div>
-					</div>
-					<div class="product-detail__comments__wrapper__reply">
-						<img class="img-responsive" src="images/logo/Logo5.png" alt="">
-						<div>
-							<div class="product-detail__comments__wrapper__reply__title">
-								<p class="lead">Art without frame</p>
-								<span class="title-comment">phản hồi</span>
-								<span>2 tuần trước</span>
-								<div class="reply">
-									<i class="fa fa-reply" aria-hidden="true"></i>
-									<a href="">Trả lời</a>
-								</div>
-							</div>
-							<p class="product-detail__comments__wrapper__reply__content">Cảm ơn khách hàng, mong quý khách hài lòng với các chính sách sau bán hàng và tiếp tục ủng hộ chúng tôi trong thời gian tới</p>
-							<hr>
-						</div>
-					</div>
-					<div class="product-detail__comments__wrapper__comment">
-						<img class="img-responsive" src="images/agencies/comment-avatar1.png" alt="">
-						<div>
-							<div class="product-detail__comments__wrapper__comment__title">
-								<p class="lead">Racob Trần</p>
-								<span class="title-comment">bình luận</span>
-								<span>1 tiếng trước</span>
-								<div class="reply">
-									<i class="fa fa-reply" aria-hidden="true"></i>
-									<a href="">Trả lời</a>
-								</div>
-							</div>
-							<p class="product-detail__comments__wrapper__comment__content">Rất cảm xúc và chất lượng! Tôi cần một vài thông tin về tác giả mong được tư vấn</p>
-							<hr>
-						</div>
-					</div><!-- end of comments-comment -->
-					<div class="product-detail__comments__wrapper__input">
-						<h5>Viết đánh giá và bình luận</h5>
-						<div class="product-detail__comments__wrapper__input__rate">
-							<p class="lead">Đánh giá:</p>
-							<span>
-								<i class="fa fa-star-o blue"></i>
-								<i class="fa fa-star-o blue"></i>
-								<i class="fa fa-star-o blue"></i>
-								<i class="fa fa-star-o blue"></i>
-								<i class="fa fa-star-o blue"></i>
-							</span>
-						</div>
-						<div class="product-detail__comments__wrapper__input__name-email">
-							<div>
-								<input type="text" class="form-control" name="Name" placeholder="Họ tên…*"/>
-								<span id="error"></span>
-							</div>
-							<div>
-								<input type="email" class="form-control" name="Email" id="email" placeholder="Email...*"/>
-								<span id="error"></span>
-							</div>
-						</div>
-						<span id="error"></span>
-						<textarea class="form-control" rows="8" id="comment" placeholder="Bình luận…*"></textarea>
-						<button class="btn btn-info">Gửi nội dung</button>
-				</div>
-				</div> <!-- end of comments-forms -->
-			</div> <!-- end of comments -->
+  <!-- Footer -->
+  <section class="footer">
+    <div class="footer__subscription">
+      <div class="footer__subscription__content">
+        <div class="footer__subscription__content__customer-support">
+          <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          <div>
+            <h6>Monphoto</h6>
+            <p>Subscribe newsletter</p>
+          </div>
+        </div>
+        <div class="footer__subscription__content__input-group">
+          <input type="email" class="form-control" name="Email" id="email" placeholder="Enter your email" />
+          <button class="btn btn-info">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__info">
+      <div class="footer__info__element">
+        <h6>Monphoto</h6>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="footer__info__element">
+        <h6>Customers</h6>
+        <ul>
+          <li>Products</li>
+          <li>Terms and conditions</li>
+          <li>More</li>
+        </ul>
+      </div>
 
-			<div class="title">
-				<div class="title__cover title__cover--1 title__cover--2"> 
-					<h3 class="center">Sản phẩm liên quan</h3>
-				</div>
-			</div>
+      <div class="footer__info__payments">
+        <div class="footer__info__payments__icons">
+          <i class="fa fa-cc-discover" aria-hidden="true"></i>
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+          <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+          <i class="fa fa-cc-jcb" aria-hidden="true"></i>
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+          <i class="fa fa-cc-stripe" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer__socials">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-google-plus" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-pinterest" aria-hidden="true"></i>
+      <i class="fa fa-deviantart" aria-hidden="true"></i>
+    </div>
+    <div class="footer__copyright">
+      <div class="wrapper">
+        <img src="images/logo/logo-reverse.png" alt="Logo Reverse">
+        <span>® Monphoto.com</span>
+        <span style="flex: 1; text-align: right; padding-right: 2rem">© 2020 - All right reserved</span>
+      </div>
+    </div>
+  </section>
+  <!-- End of Footer -->
 
-			<!-- Best sellers -->
-				<section id="home-best-sellers">
-
-					<!-- Item slider-->
-					<div class="container-fluid">
-
-					  <div class="row">
-					    <div class="col-xs-12 col-sm-12 col-md-12">
-					      <div class="carousel carousel-showmanymoveone slide" id="itemslider">
-					        <div class="carousel-inner">
-
-					          <div class="item active">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product0.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">THE KOSEQUENCE</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product1.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">MAYORAL KOŠULJA</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product11.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">PANTALONE TERI 2</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product9.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">CVETNA HALJINA</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product4.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">MAJICA FOTO</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product18.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">MAJICA MAYORAL</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					          <div class="item">
-					            <div class="col-xs-12 col-sm-6 col-md-2">
-					              <a href="#"><img src="images/products/product19.jpg" class="img-responsive center-block"></a>
-					              <h4 class="text-center">MAJICA MAYORAL</h4>
-					              <h5 class="text-center">VND 1,500,000</h5>
-					            </div>
-					          </div>
-
-					        </div>
-
-					        <div id="slider-control">
-					        <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="https://s12.postimg.org/uj3ffq90d/arrow_left.png" alt="Left" class="img-responsive"></a>
-					        <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="https://s12.postimg.org/djuh0gxst/arrow_right.png" alt="Right" class="img-responsive"></a>
-					      </div>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-					<!-- Item slider end-->
-				</section>
-
-			<!-- End of Best sellers -->
-		</div><!-- end of product-detail -->
-	</section>
-<!-- End of Full product detail -->
-
-<!-- Footer -->
-	<section class="footer">
-		<div class="footer__subscription">
-			<div class="footer__subscription__content">
-				<div class="footer__subscription__content__customer-support">
-					<i class="fa fa-paper-plane" aria-hidden="true"></i>
-					<div>
-						<h6>Nhận thông tin từ AWF</h6>
-						<p>Chăm sóc khách hàng (+84) 1649 606 906 (ex: 01-05)</p>
-					</div>
-				</div>
-				<div class="footer__subscription__content__input-group">
-					<input type="email" class="form-control" name="Email" id="email" placeholder="phuchoang.inf@gmail.com"/>
-					<button class="btn btn-info">Đăng ký</button>
-				</div>
-			</div>
-		</div>
-		<div class="footer__info">
-			<div class="footer__info__element">
-				<h6>Art without frame</h6>
-				<ul>
-					<li>Trang chủ</li>
-					<li>Về chúng tôi</li>
-					<li>Liên hệ</li>
-				</ul>
-			</div>
-			<div class="footer__info__element">
-				<h6>Khách hàng</h6>
-				<ul>
-					<li>Sản phẩm</li>
-					<li>Điều khoản & dịch vụ</li>
-					<li>Chính sách đổi trả</li>
-				</ul>
-			</div>
-			<div class="footer__info__element">
-				<h6>Họa sĩ của AWF</h6>
-				<ul>
-					<li>Giới thiệu</li>
-					<li>Portfolios</li>
-					<li>Hoạt động</li>
-				</ul>
-			</div>
-			<div class="footer__info__element">
-				<h6>Mở rộng</h6>
-				<ul>
-					<li>Tin tức</li>
-					<li>Liên kết</li>
-					<li>Đối tác</li>
-				</ul>
-			</div>
-
-			<div class="footer__info__payments">
-				<select name="language" class="selectpicker" data-width="100%">
-				  <option>Tiếng Việt</option>
-				  <option>English</option>
-				  <option>French</option>
-				</select>
-				<select name="currency" class="selectpicker" data-width="100%">
-					<option>VND</option>
-					<option>USD</option>
-					<option>EURO</option>
-				</select>
-
-				<div class="footer__info__payments__icons">
-					<i class="fa fa-cc-discover" aria-hidden="true"></i>
-					<i class="fa fa-cc-visa" aria-hidden="true"></i>
-					<i class="fa fa-cc-paypal" aria-hidden="true"></i>
-					<i class="fa fa-cc-jcb" aria-hidden="true"></i>
-					<i class="fa fa-cc-mastercard" aria-hidden="true"></i>
-					<i class="fa fa-cc-stripe" aria-hidden="true"></i>
-				</div>
-			</div>
-		</div>
-		<div class="footer__socials">
-			<i class="fa fa-facebook" aria-hidden="true"></i>
-			<i class="fa fa-twitter" aria-hidden="true"></i>
-			<i class="fa fa-google-plus" aria-hidden="true"></i>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-			<i class="fa fa-pinterest" aria-hidden="true"></i>
-			<i class="fa fa-deviantart" aria-hidden="true"></i>
-		</div>
-		<div class="footer__copyright">
-				<div class="wrapper">
-					<img src="images/logo/logo.png" alt="logo">
-					<span>® Artwithoutframe.com and Awf.com - by Art without frame, inc.</span>
-					<span style="flex: 1; text-align: right; padding-right: 2rem">A <a href="https://techmaster.vn">Techmaster.vn</a> project - All right reserved © designed by <a href="https://github.com/spideyinf">Phuchoang</a></span>
-				</div>
-		</div>
-	</section>
-<!-- End of Footer -->
-
- 	<!-- bower:js -->
- 	<script src="bower_components/jquery/dist/jquery.js"></script>
- 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
- 	<!-- <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
- 	<script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-<!--  	<script src="bower_components/get-size/get-size.js"></script>
- 	<script src="bower_components/ev-emitter/ev-emitter.js"></script>
- 	<script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
- 	<script src="bower_components/fizzy-ui-utils/utils.js"></script>
- 	<script src="bower_components/outlayer/outlayer.js"></script>
- 	<script src="bower_components/masonry/masonry.js"></script> -->
- 	<!-- endbower -->
- 	<script src="dist/main.min.js"></script>
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <!-- <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
+  <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+  <script src="bower_components/twentytwenty/js/jquery.twentytwenty.js"></script>
+  <!-- endbower -->
+  <script src="dist/main.min.js"></script>
 </body>
-</html>
 
+</html>
