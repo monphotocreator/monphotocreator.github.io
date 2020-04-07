@@ -29,7 +29,9 @@
   btnTwenty && btnTwenty.click(function () {
     setTimeout(function () {
       twentytwenty.twentytwenty({
-        // move_slider_on_hover: true,
+        default_offset_pct: 0.5,
+        move_slider_on_hover: true,
+        click_to_move: true,
       });
     }, 200);
   })

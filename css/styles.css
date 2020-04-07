@@ -1353,14 +1353,17 @@ nav.stroke ul li a:hover:after {
 .product-detail {
   min-height: 60vh; }
 
+.product-detail__container {
+  margin-bottom: 5rem; }
+
 .product-detail__products {
-  display: flex;
-  max-width: 1600px; }
+  display: flex; }
 
 .product-detail__product {
-  flex: 0 0 25%;
+  flex: 0 0 33%;
   position: relative;
-  height: 200px; }
+  height: 200px;
+  margin-bottom: 3rem; }
 
 .product-detail__modal-dialog {
   top: 5rem;
@@ -1384,7 +1387,8 @@ nav.stroke ul li a:hover:after {
 
 .product-detail__title {
   position: absolute;
-  bottom: -2rem; }
+  bottom: -2rem;
+  font-weight: 200; }
 
 @media (max-width: 1024px) {
   html {
