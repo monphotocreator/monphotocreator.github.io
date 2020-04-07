@@ -1,10 +1,9 @@
-﻿//Navbar control
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
   var scroll_start = 0;
   var startchange = $('#startchange');
   var offset = startchange.offset();
 
+  //Sticky header
   if ($(window).width() > 768) {
     if (startchange.length) {
       $(document).scroll(function () {
@@ -24,15 +23,20 @@ $(document).ready(function () {
     $('.logo-brand').css('width', '68px');
   }
 
-  var twentytwenty = $(".twentytwenty");
-  twentytwenty && twentytwenty.twentytwenty({
-    before_label: 'January 2017', // Set a custom before label
-    after_label: 'March 2017', // Set a custom after label
-  });
+  const twentytwenty = $(".twentytwenty");
+  const btnTwenty = $(".btn-twenty")
+
+  btnTwenty && btnTwenty.click(function () {
+    setTimeout(function () {
+      twentytwenty.twentytwenty({
+        // move_slider_on_hover: true,
+      });
+    }, 200);
+  })
 });
 
-// Home -  Flex panel galery
 
+// Home - Flex panel galery
 const panels = document.querySelectorAll('.home-art-panels__panel');
 
 function toggleOpen() {
@@ -137,21 +141,6 @@ $(document).ready(function () {
   });
 });
 
-//Tooltip kickoff
-$(document).ready(function () {
-  $('[data-toggle="tooltip"]').tooltip();
-});
-
-//See more - See less
-$('.see-more-see-less').click(function () {
-  var $this = $(this);
-  $this.toggleClass('see-more-see-less');
-  if ($this.hasClass('see-more-see-less')) {
-    $this.text('Xem thêm >');
-  } else {
-    $this.text('Thu gọn <');
-  }
-});
 
 
 // Product-page Carousel function
@@ -182,7 +171,6 @@ $('.see-more-see-less').click(function () {
 })(jQuery);
 
 //Home page - Carousel full screen function
-
 var $item = $('.carousel .full-screen');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
