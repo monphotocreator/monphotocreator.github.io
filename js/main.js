@@ -24,7 +24,7 @@
   }
 
   const twentytwenty = $(".twentytwenty");
-  const btnTwenty = $(".btn-twenty")
+  const btnTwenty = $(".js-btn-twenty")
 
   btnTwenty && btnTwenty.click(function () {
     setTimeout(function () {

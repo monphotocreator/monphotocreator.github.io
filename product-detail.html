@@ -8,10 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
   <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
-  <link rel="stylesheet" href="bower_components/simple-line-icons/css/simple-line-icons.css" />
   <link rel="stylesheet" href="bower_components/twentytwenty/css/twentytwenty.css" />
   <!-- endbower -->
   <link type="text/css" rel="stylesheet" href="dist/styles.min.css">
@@ -106,19 +103,36 @@
   <section class="product-detail">
     <!-- Full product detail -->
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg btn-twenty" data-toggle="modal"
-      data-target="#product-detail__modal">Open
-      Modal</button>
-
-    <div class="product-detail_product product-detail_product--with-modal">
-      <img src="http://placehold.it/800x600&amp;text=1" />
-      <img src="http://placehold.it/800x600&amp;text=2" />
+    <div class="product-detail__products">
+      <div class="product-detail__product">
+        <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" type="button"
+          data-toggle="modal" data-target="#product-detail__modal" data-toggle="tooltip" title="Open Image comparision">
+          <img src="http://placehold.it/320x200&amp;text=1" />
+          <img src="http://placehold.it/320x200&amp;text=2" />
+        </div>
+        <p class="product-detail__title">Photo editing: Basic</p>
+      </div>
+      <div class="product-detail__product">
+        <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" type="button"
+          data-toggle="modal" data-target="#product-detail__modal" data-toggle="tooltip" title="Open Image comparision">
+          <img src="http://placehold.it/320x200&amp;text=1" />
+          <img src="http://placehold.it/320x200&amp;text=2" />
+        </div>
+        <p class="product-detail__title">Photo editing: Basic</p>
+      </div>
+      <div class="product-detail__product">
+        <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" type="button"
+          data-toggle="modal" data-target="#product-detail__modal" data-toggle="tooltip" title="Open Image comparision">
+          <img src="http://placehold.it/320x200&amp;text=1" />
+          <img src="http://placehold.it/320x200&amp;text=2" />
+        </div>
+        <p class="product-detail__title">Photo editing: Basic</p>
+      </div>
     </div>
 
     <!-- Modal -->
     <div id="product-detail__modal" class="modal fade" role="dialog">
       <div class="modal-dialog product-detail__modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -128,9 +142,7 @@
           </div>
           <div class="modal-body">
             <div class="twentytwenty">
-              <!-- The before image is first -->
               <img src="http://placehold.it/800x600&amp;text=1" />
-              <!-- The after image is last -->
               <img src="http://placehold.it/800x600&amp;text=2" />
             </div>
           </div>

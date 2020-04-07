@@ -2,10 +2,18 @@
   "name": "project-1",
   "description": "monphoto project",
   "main": "home.html",
-  "authors": ["spideyinf"],
+  "authors": [
+    "spideyinf"
+  ],
   "license": "ISC",
   "homepage": "https://github.com/monphotocreator/monphotocreator.github.io",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7",
@@ -18,18 +26,24 @@
     "infinite-scroll": "^3.0.1",
     "animate.css": "^3.5.2",
     "jquery-touchswipe": "^1.6.18",
-    "twentytwenty": "*"
+    "twentytwenty": "https://github.com/zurb/twentytwenty.git#master"
   },
   "overrides": {
     "font-awesome": {
-      "main": ["css/font-awesome.min.css"]
+      "main": [
+        "css/font-awesome.min.css"
+      ]
     },
     "masonry": {
-      "main": ["./dist/masonry.pkgd.js"],
+      "main": [
+        "./dist/masonry.pkgd.js"
+      ],
       "dependencies": {}
     },
     "infinite-scroll": {
-      "main": ["./dist/infinite-scroll.pkgd.js"],
+      "main": [
+        "./dist/infinite-scroll.pkgd.js"
+      ],
       "dependencies": {}
     }
   }

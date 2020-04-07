@@ -8,7 +8,7 @@
     "commit": "a7b4057817bb098f554c5626a19c3d5ae14b280b"
   },
   "_source": "https://github.com/zurb/twentytwenty.git",
-  "_target": "*",
-  "_originalSource": "twentytwenty",
+  "_target": "master",
+  "_originalSource": "https://github.com/zurb/twentytwenty.git",
   "_direct": true
 }
