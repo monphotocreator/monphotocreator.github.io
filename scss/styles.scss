@@ -257,6 +257,7 @@ nav.stroke ul li a:hover:after {
   }
 
   .navbar-collapse {
+    overflow: hidden !important;
     background-color: $navbar-color !important;
     .stroke {
       ul {
@@ -394,17 +395,26 @@ nav.stroke ul li a:hover:after {
   }
 }
 
-.content-space-two {
+.hero__gradient {
+  height: 380px;
+  position: absolute !important;
+  top: 0;
+}
+
+.hero {
+  position: relative;
   padding: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 1rem;
   color: inherit;
-  background: url('../images/covers/Dancing-fire-Sztukowski.jpg') no-repeat
-    center center fixed;
+  background: url('../images/covers/cover-product-detail.jpg') no-repeat center
+    center fixed;
   background-size: cover;
   padding: 8rem 1rem 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 380px;
 
   .text-wrap {
     display: flex;
@@ -419,7 +429,8 @@ nav.stroke ul li a:hover:after {
       margin: 0;
       color: $white;
     }
-    blockquote h2:before {
+    blockquote h2:before,
+    blockquote h3:before {
       content: '\f10d';
       font-family: 'Fontawesome';
       float: left;
@@ -428,7 +439,7 @@ nav.stroke ul li a:hover:after {
 
     .page-break {
       width: 20vw;
-      height: 0.15rem;
+      height: 2px;
       margin: 0.5rem 0;
       background-color: #fff;
       align-self: flex-end;
@@ -442,53 +453,10 @@ nav.stroke ul li a:hover:after {
   }
 }
 
-.content-space-three {
-  padding: 0px;
-  margin-bottom: 1rem;
-  color: inherit;
-  background: url('../images/covers/Simple color digital.jpg') no-repeat center
-    center fixed;
+.hero--about {
+  background: url('../images/covers/cover-about.jpg') no-repeat center center
+    fixed;
   background-size: cover;
-  padding: 8rem 1rem 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-
-  .text-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 1170px;
-    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
-
-    blockquote {
-      border-left: none;
-      margin: 0;
-      color: $white;
-    }
-    blockquote h2:before {
-      content: '\f10d';
-      font-family: 'Fontawesome';
-      float: left;
-      margin-right: 10px;
-    }
-
-    .page-break {
-      width: 20vw;
-      height: 0.15rem;
-      margin: 0.5rem 0;
-      background-color: #fff;
-      align-self: flex-end;
-    }
-
-    p {
-      text-transform: uppercase;
-      color: $white;
-      align-self: flex-end;
-    }
-  }
 }
 
 //For full-responsive full height Home Carousel
@@ -693,9 +661,10 @@ nav.stroke ul li a:hover:after {
     z-index: 10;
     overflow: hidden;
     display: flex;
+    border-radius: 0.75rem;
 
     &__panel {
-      min-height: 90vh;
+      min-height: 80vh;
       width: 100%;
       box-shadow: inset 0 0 0 0.25rem rgba(255, 255, 255, 0.05);
       text-align: center;
@@ -1261,7 +1230,7 @@ nav.stroke ul li a:hover:after {
   background-image: url('../images/covers/cover-art-panels.jpg');
 
   /* Full height */
-  height: 60vh;
+  height: 50vh;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -1315,141 +1284,6 @@ nav.stroke ul li a:hover:after {
       }
     }
   }
-}
-
-.about-core {
-  display: flex;
-  flex-direction: column;
-
-  h3 {
-    padding: 3rem 0;
-  }
-
-  &__agencies {
-    display: flex;
-    min-height: 75vh;
-
-    &__agency {
-      flex: 1 0 auto;
-      width: 25%;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-
-      &:hover > &__overlay,
-      &:focus > &__overlay {
-        bottom: 0;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-
-      &__overlay {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: none;
-        bottom: -5rem;
-        transition: all 3s linear;
-
-        &__overlay1 {
-          background-color: rgba(15, 15, 15, 0.75);
-          flex: 4;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-          padding: 1rem;
-          width: 100%;
-
-          h6 {
-            margin: 1rem;
-            color: $white;
-            text-align: center;
-          }
-
-          p {
-            color: $gray;
-            flex: 1;
-            margin: 60% 0 0;
-            overflow: hidden;
-          }
-
-          &__links {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-
-            i {
-              padding: 1rem;
-              font-size: 1.3rem;
-              color: white;
-            }
-          }
-        }
-
-        &__overlay2 {
-          flex: 1;
-          width: 100%;
-          background-color: $red;
-          align-self: flex-end;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          h5 {
-            text-align: center;
-          }
-
-          p {
-            text-transform: uppercase;
-            text-align: center;
-            color: white;
-            padding: 0 0.5rem;
-
-            @media (max-width: 768px) {
-              font-size: 0.85rem;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &__footer {
-    height: 11.6rem;
-    background-color: $red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h4 {
-      color: white;
-      text-align: center;
-      padding: 0 1rem;
-    }
-  }
-  button {
-    align-self: center;
-    margin-top: -1.6rem;
-  }
-}
-
-.agency1 {
-  background-image: url('../images/agencies/agency1.jpg');
-}
-.agency2 {
-  background-image: url('../images/agencies/agency2.jpg');
-}
-.agency3 {
-  background-image: url('../images/agencies/agency3.jpg');
-}
-.agency4 {
-  background-image: url('../images/agencies/agency4.jpg');
 }
 
 #about-value {
@@ -1682,17 +1516,35 @@ nav.stroke ul li a:hover:after {
 
 .product-detail__products {
   display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
 }
 
 .product-detail__product {
-  flex: 0 0 33%;
+  flex: 0 0 30%;
   position: relative;
-  height: 200px;
+  height: 100%;
+  max-height: 240px;
   margin-bottom: 3rem;
+  margin-right: 1rem;
+
+  @media (max-width: 1024px) {
+    flex: 0 1 49%;
+    max-height: 267px;
+    margin-right: 0.25rem;
+  }
+
+  @media (max-width: 680px) {
+    flex: 1 1 100%;
+    max-height: 360px;
+  }
 }
 
 .product-detail__modal-dialog {
-  top: 5rem;
+  top: 10vh;
   min-width: 800px;
 }
 
@@ -1706,19 +1558,32 @@ nav.stroke ul li a:hover:after {
   cursor: pointer;
 
   img {
+    width: 100%;
+    max-width: 360px;
+    max-height: 240px;
+
+    @media (max-width: 1024px) {
+      max-width: 400px;
+      max-height: 267px;
+    }
+  }
+
+  img:last-child {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-
-    &:first-child {
-      z-index: 1;
-    }
+    z-index: -1;
   }
+
   &:hover {
     img:first-child {
       display: none;
+    }
+
+    img:last-child {
+      position: static;
     }
   }
 }

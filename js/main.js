@@ -27,6 +27,8 @@
   const btnTwenty = $(".js-btn-twenty")
 
   btnTwenty && btnTwenty.click(function () {
+    twentytwenty.empty();
+    $(this).children().clone().appendTo(twentytwenty);
     setTimeout(function () {
       twentytwenty.twentytwenty({
         default_offset_pct: 0.5,
