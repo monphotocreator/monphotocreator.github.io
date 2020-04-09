@@ -1560,13 +1560,6 @@ nav.stroke ul li a:hover:after {
 .product-detail_image {
   img {
     border-radius: 0.5rem;
-  }
-}
-
-.product-detail_image--with-modal {
-  cursor: pointer;
-
-  img {
     width: 100%;
     max-width: 360px;
     max-height: 240px;
@@ -1576,6 +1569,10 @@ nav.stroke ul li a:hover:after {
       max-height: 267px;
     }
   }
+}
+
+.product-detail_image--with-modal {
+  cursor: pointer;
 
   img:last-child {
     position: absolute;
