@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/monphotocreator/monphotocreator.github.io/issues"
   },
-  "homepage": "https://github.com/monphotocreator/monphotocreator.github.io#readme",
+  "homepage": "monphotos.com",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",

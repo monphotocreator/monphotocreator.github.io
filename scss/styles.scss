@@ -132,6 +132,9 @@ hr {
   margin-bottom: 1rem;
 }
 
+b {
+  font-weight: 400;
+}
 ////////////////////////////////////////////////////////////////
 //Home page
 ////////////////////////////////////////////////////////////////
@@ -352,7 +355,7 @@ nav.stroke ul li a:hover:after {
 .content-space-one {
   padding: 0px;
   margin-bottom: 0px;
-  background: url('../images/covers/cover-home-paralax.jpg') no-repeat center
+  background: url('../images/airbnb-cover/airbnb-cover.jpg') no-repeat center
     center fixed;
   background-size: cover;
   padding: 3rem 2rem;
@@ -718,6 +721,12 @@ nav.stroke ul li a:hover:after {
     }
   }
 
+  .home-art-panels__title {
+    color: white;
+    font-size: 2.75rem;
+    margin-bottom: 2rem;
+  }
+
   .panel1 {
     background-image: url('../images/panels/panel1.jpg');
   }
@@ -860,7 +869,7 @@ nav.stroke ul li a:hover:after {
   }
 
   .home-airbnb-cover {
-    background: url('../images/airbnb-cover/airbnb-cover.jpg') no-repeat center
+    background: url('../images/covers/cover-home-paralax.jpg') no-repeat center
       center fixed;
     background-size: cover;
     width: 100%;
@@ -1574,11 +1583,11 @@ nav.stroke ul li a:hover:after {
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: -1;
+    z-index: 2;
   }
 
   &:hover {
-    img:first-child {
+    img:last-child {
       display: none;
     }
 
