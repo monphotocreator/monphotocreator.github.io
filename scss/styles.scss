@@ -527,15 +527,27 @@ nav.stroke ul li a:hover:after {
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
-    padding: 3.5rem 0;
+    padding: 3rem 2rem;
     background-color: $lightgray;
+
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
 
     &__holder {
       max-width: 1170px;
       width: 100%;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 1rem 3.5rem;
+      grid-gap: 1rem 2.5rem;
+
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 526px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       &__brand {
         justify-self: center;
@@ -621,6 +633,7 @@ nav.stroke ul li a:hover:after {
         height: 100%;
         width: 1rem;
         right: 0;
+        top: 0;
       }
     }
 
@@ -666,6 +679,10 @@ nav.stroke ul li a:hover:after {
     display: flex;
     border-radius: 0.75rem;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     &__panel {
       min-height: 80vh;
       width: 100%;
@@ -684,6 +701,10 @@ nav.stroke ul li a:hover:after {
       flex-direction: column;
       cursor: pointer;
 
+      @media (max-width: 768px) {
+        min-height: 40vh;
+      }
+
       p {
         font-family: 'Streamster';
         font-size: 3rem;
@@ -691,6 +712,10 @@ nav.stroke ul li a:hover:after {
         color: white;
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.75), 0 0 10px rgba(0, 0, 0, 0.25);
         transition: linear 0.5s;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
 
       p:nth-child(2) {
@@ -700,6 +725,7 @@ nav.stroke ul li a:hover:after {
         flex: 2;
         white-space: pre-wrap;
         text-align: center;
+        display: flex;
       }
 
       > * {
@@ -737,21 +763,23 @@ nav.stroke ul li a:hover:after {
     background-image: url('../images/panels/panel3.jpg');
   }
 
-  .home-art-panels__panel.open-active > *:first-child {
-    transform: translateY(0);
-  }
+  @media (min-width: 768px) {
+    .home-art-panels__panel.open-active > *:first-child {
+      transform: translateY(0);
+    }
 
-  .home-art-panels__panel.open-active > *:last-child {
-    transform: translateY(0);
-  }
+    .home-art-panels__panel.open-active > *:last-child {
+      transform: translateY(0);
+    }
 
-  .home-art-panels__panel.open {
-    font-size: 3rem;
-    flex: 3;
+    .home-art-panels__panel.open {
+      font-size: 3rem;
+      flex: 3;
 
-    p:nth-child(2) {
-      font-size: 4rem;
-      color: $blue;
+      p:nth-child(2) {
+        font-size: 4rem;
+        color: $blue;
+      }
     }
   }
 }
@@ -922,8 +950,10 @@ nav.stroke ul li a:hover:after {
     }
 
     .carousel-indicators .active {
-      width: 128px;
-      height: 128px;
+      @media (min-width: 768px) {
+        width: 128px;
+        height: 128px;
+      }
       opacity: 1;
       transition: all 0.2s;
     }
@@ -1241,6 +1271,10 @@ nav.stroke ul li a:hover:after {
   /* Full height */
   height: 50vh;
 
+  @media (max-width: 768px) {
+    height: 30vh;
+  }
+
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -1325,6 +1359,10 @@ nav.stroke ul li a:hover:after {
     position: absolute;
     top: -3rem;
     left: 0;
+
+    @media (max-width: 768px) {
+      font-size: 12rem;
+    }
   }
 
   &__video1 {
@@ -1521,6 +1559,12 @@ nav.stroke ul li a:hover:after {
 
 .product-detail__container {
   margin-bottom: 5rem;
+
+  hr {
+    border-color: $lightgray;
+    margin-bottom: 2.5rem;
+    margin-right: 4.75rem;
+  }
 }
 
 .product-detail__products {
@@ -1555,6 +1599,11 @@ nav.stroke ul li a:hover:after {
 .product-detail__modal-dialog {
   top: 10vh;
   min-width: 800px;
+
+  @media (max-width: 768px) {
+    top: 25vh;
+    min-width: auto;
+  }
 }
 
 .product-detail_image {
@@ -1572,7 +1621,9 @@ nav.stroke ul li a:hover:after {
 }
 
 .product-detail_image--with-modal {
-  cursor: pointer;
+  @media (min-width: 768px) {
+    cursor: pointer;
+  }
 
   img:last-child {
     position: absolute;
@@ -1628,8 +1679,8 @@ nav.stroke ul li a:hover:after {
 @media (max-width: 768px) {
 }
 
-//For Phones less than 425px
-@media (max-width: 425px) {
+//For Phones less than 526px
+@media (max-width: 526px) {
   h1.red {
     font-size: 2.2rem;
   }

@@ -27,6 +27,7 @@
   const btnTwenty = $(".js-btn-twenty")
 
   btnTwenty && btnTwenty.click(function () {
+    $('#product-detail__modal').modal();
     twentytwenty.empty();
     $(this).children().clone().appendTo(twentytwenty);
     setTimeout(function () {
