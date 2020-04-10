@@ -298,14 +298,17 @@ a {
 .fa-pinterest:hover {
   color: #bd081c; }
 
-.fa-deviantart:hover {
-  color: #00ce3e; }
-
 .fa-linkedin:hover {
   color: #0077b5; }
 
 .fa-behance:hover {
   color: #1769ff; }
+
+.fa-skype:hover {
+  color: #0cadeb; }
+
+.fa-gmail:hover {
+  color: #dd564c; }
 
 hr {
   border-top: 1.25px solid #696969;
@@ -545,7 +548,6 @@ nav.stroke ul li a:hover:after {
 .hero {
   position: relative;
   padding: 0px;
-  margin-bottom: 1rem;
   color: inherit;
   background: url("../images/covers/cover-product-detail.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -585,6 +587,10 @@ nav.stroke ul li a:hover:after {
 
 .hero--about {
   background: url("../images/covers/cover-about.jpg") no-repeat center center fixed;
+  background-size: cover; }
+
+.hero--footer {
+  background: url("../images/covers/cover-art-panels.jpg") no-repeat center center fixed;
   background-size: cover; }
 
 .full-screen {
@@ -808,7 +814,7 @@ nav.stroke ul li a:hover:after {
         color: #236ed4; } }
 
 #home-airbnb-feature {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column; }
@@ -842,9 +848,8 @@ nav.stroke ul li a:hover:after {
     align-items: center;
     position: relative; }
     #home-airbnb-feature .home-airbnb-holder--h3 {
-      font-family: 'Deadstock';
       font-size: 4.5rem;
-      padding: 3rem 0;
+      padding: 5rem 0;
       text-transform: none;
       color: white;
       text-align: center;
@@ -891,7 +896,7 @@ nav.stroke ul li a:hover:after {
     background: url("../images/covers/cover-home-paralax.jpg") no-repeat center center fixed;
     background-size: cover;
     width: 100%;
-    height: 90vh; }
+    height: 60vh; }
 
 #home-testimonials {
   display: flex;
@@ -968,6 +973,8 @@ nav.stroke ul li a:hover:after {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .footer__subscription a {
+      color: white; }
     .footer__subscription__content {
       max-width: 1170px;
       width: 100%;
@@ -1002,15 +1009,17 @@ nav.stroke ul li a:hover:after {
           flex: 9;
           height: 2.2rem;
           margin: 0.5rem; }
-        .footer__subscription__content__input-group button {
+        .footer__subscription__content__input-group a {
           flex: 2;
+          justify-content: center;
+          align-items: center;
           height: 2.2rem;
           margin: 0.5rem 2rem 0.5rem 0.25rem;
-          padding: 0 0.5rem;
+          padding: 4px 0.5rem;
           border-radius: 5px;
           font-size: 1.2rem; }
           @media (max-width: 425px) {
-            .footer__subscription__content__input-group button {
+            .footer__subscription__content__input-group a {
               font-size: 1rem; } }
         @media (max-width: 425px) {
           .footer__subscription__content__input-group {
@@ -1103,8 +1112,7 @@ nav.stroke ul li a:hover:after {
     .footer__socials i {
       font-size: 1.55rem;
       color: #696969;
-      padding: 0 1rem;
-      cursor: pointer; }
+      padding: 0 1rem; }
   .footer__copyright {
     background-color: #696969;
     width: 100%;

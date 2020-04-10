@@ -17,8 +17,9 @@ $google-plus: #dd4b39;
 $linkedin: #0077b5;
 $instagram: #e4405f;
 $pinterest: #bd081c;
-$deviantart: #00ce3e;
 $behance: #1769ff;
+$skype: #0cadeb;
+$gmail: #dd564c;
 
 //Fonts
 $Oswald: 'Oswald', sans-serif;
@@ -79,14 +80,17 @@ $Oswald: 'Oswald', sans-serif;
   &-pinterest:hover {
     color: $pinterest;
   }
-  &-deviantart:hover {
-    color: $deviantart;
-  }
   &-linkedin:hover {
     color: $linkedin;
   }
   &-behance:hover {
     color: $behance;
+  }
+  &-skype:hover {
+    color: $skype;
+  }
+  &-gmail:hover {
+    color: $gmail;
   }
 }
 
@@ -407,7 +411,6 @@ nav.stroke ul li a:hover:after {
 .hero {
   position: relative;
   padding: 0px;
-  margin-bottom: 1rem;
   color: inherit;
   background: url('../images/covers/cover-product-detail.jpg') no-repeat center
     center fixed;
@@ -459,6 +462,12 @@ nav.stroke ul li a:hover:after {
 .hero--about {
   background: url('../images/covers/cover-about.jpg') no-repeat center center
     fixed;
+  background-size: cover;
+}
+
+.hero--footer {
+  background: url('../images/covers/cover-art-panels.jpg') no-repeat center
+    center fixed;
   background-size: cover;
 }
 
@@ -787,7 +796,7 @@ nav.stroke ul li a:hover:after {
 //Air-bnb feature
 
 #home-airbnb-feature {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -833,9 +842,8 @@ nav.stroke ul li a:hover:after {
     position: relative;
 
     &--h3 {
-      font-family: 'Deadstock';
       font-size: 4.5rem;
-      padding: 3rem 0;
+      padding: 5rem 0;
       text-transform: none;
       color: white;
       text-align: center;
@@ -901,7 +909,7 @@ nav.stroke ul li a:hover:after {
       center fixed;
     background-size: cover;
     width: 100%;
-    height: 90vh;
+    height: 60vh;
   }
 }
 
@@ -1009,6 +1017,10 @@ nav.stroke ul li a:hover:after {
     align-items: center;
     justify-content: center;
 
+    a {
+      color: white;
+    }
+
     &__content {
       max-width: 1170px;
       width: 100%;
@@ -1055,11 +1067,13 @@ nav.stroke ul li a:hover:after {
           margin: 0.5rem;
         }
 
-        button {
+        a {
           flex: 2;
+          justify-content: center;
+          align-items: center;
           height: 2.2rem;
           margin: 0.5rem 2rem 0.5rem 0.25rem;
-          padding: 0 0.5rem;
+          padding: 4px 0.5rem;
           border-radius: 5px;
           font-size: 1.2rem;
 
@@ -1199,7 +1213,6 @@ nav.stroke ul li a:hover:after {
       font-size: 1.55rem;
       color: $darkgray;
       padding: 0 1rem;
-      cursor: pointer;
     }
   }
 
