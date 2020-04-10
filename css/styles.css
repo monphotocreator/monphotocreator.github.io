@@ -1423,6 +1423,9 @@ nav.stroke ul li a:hover:after {
   bottom: -2rem;
   font-weight: 200; }
 
+.twentytwenty-wrapper img {
+  border-radius: 0.5rem; }
+
 @media (max-width: 1024px) {
   html {
     font-size: 14px; }
