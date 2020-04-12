@@ -2,22 +2,23 @@
 <html lang="en">
 
 <head>
-  <title>Monphoto - About us</title>
+  <title>Monphoto - Product detail</title>
   <link rel="shortcut icon" href="images/logo/favicon.ico" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Monphotos.com - A faithful service for real estate images and design">
-
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="bower_components/twentytwenty/css/twentytwenty.css" />
   <!-- endbower -->
   <link type="text/css" rel="stylesheet" href="dist/styles.min.css">
 </head>
 
 <body>
-
-
+  <!-- Navbar and Carousel + Parallax effects thanks to @taylorgrendel  -->
+  <!-- Navbar -->
   <nav class="navbar navbar-default navbar-moving" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +41,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="about.html">About us</a>
             </li>
 
@@ -92,115 +93,163 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
   <div id="startchange"></div>
   <!-- End of Navbar -->
-  <div class="hero hero--about">
+
+  <div class="hero">
     <div class="gradient hero__gradient"></div>
     <div class="text-wrap">
       <blockquote>
-        <h3>Future is about creating value. If we have tools to empower each other, more possibility is reality.</h3>
+        <h2>Creativity is intelligence having fun.</h2>
       </blockquote>
       <div class="page-break"></div>
-      <p style="text-align: right">Jessica Jackley</p>
+      <p style="text-align: right">Albert Einstein</p>
     </div>
   </div>
 
-  <!-- About-intro -->
-  <div class="title">
-    <div class="title__cover title__cover--2">
-      <h3>About us</h3>
-    </div>
-  </div>
-
-  <section class="about-intro">
-    <div class="about-intro__article">
-      <p>
-        We have started as a standalone property photography company in 2016.
-        Built on the trust of our customers and aim to always deliver excellent quality, we continue to service the
-        residential and commercial real estate market in USA, Australia and European market, with over 1 million images
-        to date and counting.
-        Today we have an extensive range of product offerings that caters to the diverse visual marketing needs of our
-        clients which include leading real estate groups, real estate professionals, home owners, builders, retailers,
-        architects and property developers.
-        We are proud to be one of the most trusted names in real estate media production services, since 2017.
-      </p>
-    </div>
-  </section>
-
-  <!-- End of About-intro -->
-
-
-  <!-- About Value -->
-
-  <div class="title">
-    <div class="title__cover title__cover--1">
-      <h3 class="right">Our Values</h3>
-    </div>
-  </div>
-
-  <section id="about-value">
-    <div class="about-value">
-      <h3>We go together</h3>
-      <p class="mb-3">Before we get started, so that we deliver professional results a one-on-one in-depth profiling is
-        the basis to
-        ensure that every aspect and requirement for your visual marketing content and campaign is captured.
-        On the job, <span class="lead">
-          Monphoto
-        </span> highly trained and experienced team will always strive to provide a personalized and tailored service.
-        Our aim is for 100% customer satisfaction. Our production teams carefully attend to every service we deliver and
-        maintain high quality control standards to further enhance visual appeal.</p>
-      <h3>Innovation</h3>
-      <p>
-        We is at the forefront of introducing cutting-edge services.
-        Customer's data hosted on a cloud platform provides secure access and a faster and better user experience to
-        manage products anytime, anywhere and we always backup them at our end for long time.
-        Through our cloud storage you can easily download property images and floor plans onto your desktop and email
-        them to suppliers and vendors with the click of a button. You can further share these images on social media,
-        create video slideshows and instantaneously ask for revisions through the quick and easy redo request system.
-      </p>
-    </div>
-  </section>
-
-  <!-- End of About Value -->
-
-  <div class="title">
-    <div class="title__cover title__cover--1">
-      <h3 class="right">Best practices</h3>
-    </div>
-  </div>
-  <!-- About-videos -->
-  <section id="about-videos">
-    <div class="about-videos">
-      <div class="about-videos__bg-art">&nbsp;Mon</div>
-      <div class="about-videos__video1">
-        <div class="about-videos__video__title">
-          <h4>Photo Editing</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni doloribus delectus beatae dolor voluptatum
-            pariatur eius doloremque molestiae ea, cumque numquam quam blanditiis suscipit ipsam rem fuga ipsum labore,
-            fugiat?</p>
-        </div>
-        <iframe allowtransparency="true" width="560" height="315"
-          src="https://www.youtube-nocookie.com/embed/jRzDP2bqzKo?wmode=opaque?rel=0&amp;controls=0&amp;showinfo=0"
-          frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="about-videos__video2">
-        <iframe allowtransparency="true" width="560" height="315"
-          src="https://www.youtube-nocookie.com/embed/NqCt6355lr0?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-          allowfullscreen></iframe>
-        <div class="about-videos__video__title">
-          <h4>Photo retouching</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni doloribus delectus beatae dolor voluptatum
-            pariatur eius doloremque molestiae ea, cumque numquam quam blanditiis suscipit ipsam rem fuga ipsum labore,
-            fugiat?</p>
+  <section class="product-detail">
+    <!-- Full product detail -->
+    <!-- Trigger the modal with a button -->
+    <div class="product-detail__container container">
+      <h1 class="center my-4">Virtual Staging</h1>
+      <div class="title">
+        <div class="title__cover title__cover--2">
+          <h3>Normal</h3>
         </div>
       </div>
-      <div class="about-videos__bg-without-frame">photos</div>
+      <div class="product-detail__products">
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-01-before.jpg" />
+            <img src="images/products/vh-01-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Normal:</b> Living room</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-02-before.jpg" />
+            <img src="images/products/vh-02-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Normal:</b> Bedroom</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-03-before.jpg" />
+            <img src="images/products/vh-03-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Normal:</b> Living room</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-04-before.jpg" />
+            <img src="images/products/vh-04-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Normal:</b> Bedroom</p>
+        </div>
+      </div>
+      <hr>
+      <div class="title">
+        <div class="title__cover title__cover--2">
+          <h3>Renovation</h3>
+        </div>
+      </div>
+      <div class="product-detail__products">
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-05-before.jpg" />
+            <img src="images/products/vh-05-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Living room</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-06-before.jpg" />
+            <img src="images/products/vh-06-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Bedroom</p>
+        </div>
+      </div>
+
+      <div class="title">
+        <h1 class="center my-4">Day to Dusk</h1>
+      </div>
+      <div class="product-detail__products">
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-05-before.jpg" />
+            <img src="images/products/vh-05-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Living room</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-06-before.jpg" />
+            <img src="images/products/vh-06-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Bedroom</p>
+        </div>
+      </div>
+
+      <h1 class="center my-4">Portrait</h1>
+      <div class="product-detail__products">
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-05-before.jpg" />
+            <img src="images/products/vh-05-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Living room</p>
+        </div>
+        <div class="product-detail__product">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/vh-06-before.jpg" />
+            <img src="images/products/vh-06-after.jpg" />
+          </div>
+          <p class="product-detail__title"><b>Renovation:</b> Bedroom</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="product-detail__modal" class="modal fade" role="dialog">
+      <div class="modal-dialog product-detail__modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-lg close" data-dismiss="modal"><i class="fa fa-times"
+                aria-hidden="true"></i></button>
+            <h5 class="modal-title text-center">Image comparision: Before - After</h5>
+          </div>
+          <div class="modal-body">
+            <div class="twentytwenty">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- End of About-videos -->
+  <!-- End of Full product detail -->
 
-  <div class="parallax"></div>
+  <div class="hero hero--footer">
+    <div class="gradient hero__gradient"></div>
+    <div class="text-wrap">
+      <blockquote>
+        <h3>If everyone is moving forward together,
+          <br>then success takes care of itself.</h3>
+      </blockquote>
+      <div class="page-break"></div>
+      <p style="text-align: right">Henry Ford</p>
+    </div>
+  </div>
   <!-- Footer -->
   <section class="footer">
     <div class="footer__subscription">
@@ -225,8 +274,8 @@
       <div class="footer__info__element">
         <h6>Monphoto</h6>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="product-detail.html">About us</a></li>
+          <li><a href="product-detail.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
           <li>Contact</li>
         </ul>
       </div>
@@ -258,6 +307,7 @@
       <a href="skype:duong.nv88?chat"><i class="fa fa-skype" aria-hidden="true"></i></a>
       <i class="fa fa-google-plus" aria-hidden="true"></i>
       <i class="fa fa-pinterest" aria-hidden="true"></i>
+
     </div>
     <div class="footer__copyright">
       <div class="wrapper">
@@ -272,14 +322,8 @@
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <!-- <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script> -->
   <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-  <!--  	<script src="bower_components/get-size/get-size.js"></script>
- 	<script src="bower_components/ev-emitter/ev-emitter.js"></script>
- 	<script src="bower_components/desandro-matches-selector/matches-selector.js"></script>
- 	<script src="bower_components/fizzy-ui-utils/utils.js"></script>
- 	<script src="bower_components/outlayer/outlayer.js"></script>
- 	<script src="bower_components/masonry/masonry.js"></script> -->
+  <script src="bower_components/twentytwenty/js/jquery.twentytwenty.js"></script>
   <!-- endbower -->
   <script src="dist/main.min.js"></script>
 </body>
