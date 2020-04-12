@@ -79,6 +79,7 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="others.html">Basic</a></li>
                 <li><a href="others.html">Advance</a></li>
+                <li><a href="others.html">Highend</a></li>
               </ul>
             </li>
             <li class="dropdown active">
@@ -212,6 +213,35 @@
             title="Open Image comparision">
             <img src="images/products/dtd-03-before.jpg" />
             <img src="images/products/dtd-03-after.jpg" />
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="title">
+        <div class="title__cover title__cover--2">
+          <h3>Highend</h3>
+        </div>
+      </div>
+      <div class="product-detail__products">
+        <div class="product-detail__product product-detail__product--portrait">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/dtd-04-before.jpg" />
+            <img src="images/products/dtd-04-after.jpg" />
+          </div>
+        </div>
+        <div class="product-detail__product product-detail__product--portrait">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/dtd-05-before.jpg" />
+            <img src="images/products/dtd-05-after.jpg" />
+          </div>
+        </div>
+        <div class="product-detail__product product-detail__product--portrait">
+          <div class="product-detail_image product-detail_image--with-modal js-btn-twenty" data-toggle="tooltip"
+            title="Open Image comparision">
+            <img src="images/products/dtd-06-before.jpg" />
+            <img src="images/products/dtd-06-after.jpg" />
           </div>
         </div>
       </div>
@@ -368,6 +398,27 @@
   <script src="bower_components/twentytwenty/js/jquery.twentytwenty.js"></script>
   <!-- endbower -->
   <script src="dist/main.min.js"></script>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v6.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="2326034581055052">
+  </div>
 </body>
 
 </html>

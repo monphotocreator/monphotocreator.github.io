@@ -78,13 +78,14 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="others.html">Basic</a></li>
                 <li><a href="others.html">Advance</a></li>
+                <li><a href="others.html">Highend</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="product-detail.html" class="dropdown-toggle" data-toggle="dropdown">Portrait</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="others.html">Basic</a></li>
-                <li><a href="others.html">Advance</a></li>
+                <li><a href="product-detail.html#portrait">Basic</a></li>
+                <li><a href="product-detail.html#portrait">Advance</a></li>
               </ul>
             </li>
           </ul>
@@ -99,9 +100,7 @@
     <div class="gradient hero__gradient"></div>
     <div class="text-wrap">
       <blockquote>
-        <h3>Future is about creating value. <br>
-          If we have tools to empower each other, more possibility is reality.
-        </h3>
+        <h3>Future is about creating value. If we have tools to empower each other, more possibility is reality.</h3>
       </blockquote>
       <div class="page-break"></div>
       <p style="text-align: right">Jessica Jackley</p>
@@ -284,6 +283,27 @@
  	<script src="bower_components/masonry/masonry.js"></script> -->
   <!-- endbower -->
   <script src="dist/main.min.js"></script>
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v6.0'
+      });
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Your customer chat code -->
+  <div class="fb-customerchat" attribution=setup_tool page_id="2326034581055052">
+  </div>
 </body>
 
 </html>
