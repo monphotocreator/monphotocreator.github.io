@@ -601,6 +601,20 @@ nav.stroke ul li a:hover:after {
   background: url("../images/covers/cover-art-panels.jpg") no-repeat center center fixed;
   background-size: cover; }
 
+.hero--fp-top {
+  background: url("../images/covers/cover-fp-01.jpg") no-repeat center center fixed; }
+
+.hero--fp-bottom {
+  background: url("../images/covers/cover-fp-02.jpg") no-repeat center center fixed;
+  background-size: cover; }
+
+.hero--other-top {
+  background: url("../images/covers/cover-other-01.jpg") no-repeat center center fixed; }
+
+.hero--other-bottom {
+  background: url("../images/covers/cover-other-02.jpg") no-repeat center center fixed;
+  background-size: cover; }
+
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -1397,6 +1411,16 @@ nav.stroke ul li a:hover:after {
     .product-detail__product {
       flex: 1 1 100%;
       max-height: 360px; } }
+
+.product-detail__product--portrait {
+  max-height: 480px; }
+  .product-detail__product--portrait .product-detail_image img {
+    max-width: 360px;
+    max-height: 520px; }
+    @media (max-width: 1024px) {
+      .product-detail__product--portrait .product-detail_image img {
+        max-width: 400px;
+        max-height: 600px; } }
 
 .product-detail__modal-dialog {
   top: 10vh;
