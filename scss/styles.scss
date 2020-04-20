@@ -746,20 +746,23 @@ nav.stroke ul li a:hover:after {
         min-height: 40vh;
       }
 
-      p {
+      p,
+      p a {
         font-family: 'Streamster';
         font-size: 3rem;
         padding: 0.5rem;
         color: white;
         text-shadow: 0 0 4px rgba(0, 0, 0, 0.75), 0 0 10px rgba(0, 0, 0, 0.25);
         transition: linear 0.5s;
+        justify-content: center;
 
         @media (max-width: 768px) {
           display: none;
         }
       }
 
-      p:nth-child(2) {
+      p:nth-child(2),
+      p:nth-child(2) a {
         font-family: $Oswald;
         font-weight: 500;
         font-size: 3.2rem;
